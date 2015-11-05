@@ -1,0 +1,35 @@
+body{
+  width:90%;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 20px 20px;
+}
+nav ul{
+  list-style:none;
+}
+li {
+  border: 1px solid black;
+  background: rgb(232, 167, 108);
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+}
+li:hover{
+  background: white;
+}
+header > h1{
+  background: rgba(235, 188, 49, 0.79);
+  border-radius: 20px 20px 0px 0px;
+  margin:0;
+  padding:5px;
+  text-align: center;
+  box-shadow: 5px 5px 20px gray;
+}
+footer{
+  padding: 5px;
+  border-radius: 0px 0px 20px 20px;
+  background-color: #d66720;
+  color: white;
+  text-align: center;
+
+}
