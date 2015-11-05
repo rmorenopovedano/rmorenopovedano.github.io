@@ -1,0 +1,37 @@
+<!--
+Implementa ComprobacionHora que solicite los segundos, minutos y hora e indique si
+es correcta. Si lo fuera, ha de mostrar la hora un segundo después.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 9</title>
+  <script type="text/javascript" src="js/ejercicio9.js"></script>
+</head>
+<body>
+  <table>
+    <form action="#" name="formulario">
+      <tr>
+        <td><label for="segundos">Introduce los segundos: </label> </td>
+        <td>  <input type="number" id="segundos" min="0" max="60"><span id="error"></span></td>
+      </tr>
+      <tr>
+        <td><label for="minutos">Introduce los minutos: </label> </td>
+        <td>  <input type="number" id="minutos" min="0" max="60"><span id="error"></span></td>
+      </tr>
+      <tr>
+        <td><label for="hora">Introduce la hora: </label> </td>
+        <td>  <input type="number" id="hora" min="0" max="24"><span id="error"></span></td>
+      </tr>
+        <tr>
+          <td></td>
+          <td><input type="button" id="button" value="Comprobar"></td>
+    </form>
+  </table>
+  <p>
+   <span id="informacion"></span>
+  </p>
+
+</body>
+</html>
