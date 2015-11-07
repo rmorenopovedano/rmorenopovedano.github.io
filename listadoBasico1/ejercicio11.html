@@ -1,0 +1,37 @@
+<!--
+Implementa MediaPositivos que calcule la media de una serie de números positivos,
+introducidos por teclado. Dejará de leer cuando el usuario introduzca el 0.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 11</title>
+
+</head>
+<body>
+  <table>
+    <p>
+      Implementa MediaPositivos que calcule la media de una serie de números positivos,
+      introducidos por teclado. Dejará de leer cuando el usuario introduzca el 0.
+    </p>
+    <form action="#" name="formulario">
+      <tr>
+        <td><label for="numero">Introduce un número: </label> </td>
+        <td>  <input type="text" id="numero"> <span id="error" style="color: red"></span></td>
+      </tr>
+        <tr>
+          <td><input type="button" id="annadir" value="Introducir número"></td>
+          <td><input type="button" id="media" value="Calcular media"></td>
+    </form>
+  </table>
+  <p>
+    Números introducidos:
+    <span id="numerosIntroducidos"></span>
+  </p>
+  <p>Media de los números:
+   <span id="informacion"></span>
+  </p>
+  <script type="text/javascript" src="js/ejercicio11.js"></script>
+</body>
+</html>
