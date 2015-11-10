@@ -6,7 +6,7 @@ b. Para indicar si la solución es mayor o es menor.
 @author Raul Moreno Povedano
 */
 window.onload = function() {
-  document.getElementById("formulario").onsubmit = comprobar;
+  document.getElementById("button").onclick = comprobar;
 }
 function nuevoJuego(){
   intentos=0;
