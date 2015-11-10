@@ -68,9 +68,7 @@ function comprobarUltimaE(){
 //quitar las primeras 3 letras de una cadena
 function quitarTresPrimerasletras(){
   var nombre=document.getElementById('nombre').value;
-  alert(nombre);
   var nombreReducido=nombre.substr(3);
-  alert(nombreReducido);
   if(nombre.length<4)
     return "Tu nombre tiene 3 o menos letras";
   else
