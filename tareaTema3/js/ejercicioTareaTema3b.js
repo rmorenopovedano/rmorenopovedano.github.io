@@ -21,7 +21,7 @@ function mostrarInfo(){
     resultado.innerHTML+="<br>Tu nombre tiene "+comprobarCaracteres()+" caracteres, incluidos espacios";
     resultado.innerHTML+="<br>La primera letra E de tu nombre está en la posición: "+comprobarPrimeraE();
     resultado.innerHTML+="<br>La última letra E de tu nombre está en la posición: "+comprobarUltimaE();
-    resultado.innerHTML+="<br>Tu nombre menos las 3 primeras letras es: "+quitar3Primerasletras();
+    resultado.innerHTML+="<br>Tu nombre menos las 3 primeras letras es: "+quitarTresPrimerasletras();
     resultado.innerHTML+="<br>Tu nombre todo en MAYÚSCULAS es: "+document.getElementById('nombre').value.toUpperCase();
     resultado.innerHTML+="<br>Tu edad es: "+calcularEdad();
     resultado.innerHTML+="<br>Naciste un feliz "+document.getElementById('dia').value +" del año "+document.getElementById('anno').value+". No te acuerdas, pero era "+calcularDiaSemana()+" y "+Bisiesto(document.getElementById('anno').value)+" bisiesto";
@@ -66,13 +66,15 @@ function comprobarUltimaE(){
   }
 }
 //quitar las primeras 3 letras de una cadena
-function quitar3Primerasletras(){
+function quitarTresPrimerasletras(){
   var nombre=document.getElementById('nombre').value;
-  var nombreMay=nombre.toUpperCase().substr(3);
-  if(nombreMay.length<4)
+  alert(nombre);
+  var nombreReducido=nombre.substr(3);
+  alert(nombreReducido);
+  if(nombre.length<4)
     return "Tu nombre tiene 3 o menos letras";
   else
-    return nombreMay;
+    return nombreReducido;
 }
 function calcularEdad(){
   var today = new Date();
