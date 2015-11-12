@@ -5,9 +5,10 @@ a. Para indicar si has acertado (en una nueva ventana)
 b. Para indicar si la solución es mayor o es menor.
 @author Raul Moreno Povedano
 */
-window.onload = function() {
-  document.getElementById("button").onclick = comprobar;
-}
+window.addEventListener("load", function(){
+    document.getElementById("button").addEventListener("click", comprobar);
+    nuevoJuego();
+});
 function nuevoJuego(){
   intentos=0;
   mensajeErr="";
@@ -48,18 +49,10 @@ function comprobar(){
 }
 function acertar(){
   nuevaVentana=window.open();
-  nuevaVentana.document.write("<script type='text/javascript' src='js/ejercicio1.js'></script>");
+  nuevaVentana.document.write("<script type='text/javascript' src='js/ejercicio1a.js'></script>");
   nuevaVentana.document.write("ACERTASTE!");
   nuevaVentana.document.write("<br>Volver a jugar??<br>");
-  nuevaVentana.document.write("<input type='button' id='si' value='Si' onClick='aceptar()'>");
-  nuevaVentana.document.write("<input type='button' id='no' value='No' onClick='rechazar()'>");
-}
-function aceptar (){
-  window.parent.location.reload();
-  window.close();
-
-}
-function rechazar(){
-  document.write("<br>Adiós");
-  setTimeout(function(){window.close();},1000);
+  nuevaVentana.document.write("<input type='button' id='si' value='Si'>");
+  nuevaVentana.document.write("<input type='button' id='no' value='No'>");
+  nuevaVentana.document.close();
 }
