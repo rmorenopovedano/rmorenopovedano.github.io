@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tutorial Arrays Raúl Moreno Povedano</title>
+</head>
+<body>
+  <h2>Abrir consola para mostrar resultados:</h2>
+  <ul>
+    <li><input type="button" id="pop" value="Pop and push"></li>
+    <li><input type="button" id="shift" value="Shift and Unshift"></li>
+    <li><input type="button" id="iterating" value="Iterating over array"></li>
+    <li><input type="button" id="join" value="Join and split"></li>
+    <li><input type="button" id="array" value="Array is object"></li>
+    <li><input type="button" id="splice" value="Splice"></li>
+    <li><input type="button" id="sort" value="Sort"></li>
+    <li><input type="button" id="newArray" value="new Array"></li>
+  </ul>
+  <p>
+    Realiza el tutorial JavaScript tutorial: Array.
+    Entrega los códigos y responde a las siguientes preguntas:
+  </p>
+  <ol>
+    <li>
+      Declaración recomendada para la creación de arrays en JavaScript
+    </li>
+    var array = Array();
+    var array = [];
+    <li>
+      pop() y push()
+      <ol>
+        <li>
+          Utilidad
+        </li>
+        1.	Pop():  Elimina el último elemento de un array y lo devuelve.<br>
+        2.	Push(): Añade elementos al final de un array.
+        <li>
+          ¿Modifican el array original?
+        </li>
+        Ambos modifican el array original. Pop() aumenta el tamaño del array y push lo disminuye.
+        <li>
+          ¿Devuelven algún valor?
+        </li>
+        Pop(): devuelve el valor del último elemento.
+      </ol>
+    </li>
+    <li>
+      shift() y unshift()
+      <ol>
+        <li>
+          Utilidad
+        </li>
+        1.	Shift(): Elimina el primer elemento de un array y lo devuelve..<br>
+        2.	Unshift(): Añade elementos al principio del array.
+        <li>
+          ¿Modifican el array original?
+        </li>
+        Ambos modifican el array original.
+        <li>
+          ¿Devuelven algún valor?
+        </li>
+        Shift(): devuelve el valor del primer elemento del array.
+      </ol>
+    </li>
+    <li>
+      De los cuatro métodos anteriores, indica los recomendados para la inserción/eliminación de un elemento y por qué.
+    </li>
+    Si buscas añadir elementos al final, el método push(). Si quieres añadir elementos al inicio, el método unshift(). En el caso de querer eliminar elementos, pop() en caso de querer hacerlo del final, y shift() en caso de querer eliminar elementos del principio del array. Pero si tu objetivo es añadir o quitar elementos del array sea donde sea, es mejor usar pop() y push(), ya que al quitar elementos del final, es más fácil de reorganizar el array que si usamos el shift() o unshift(), ya que añade y elimina del principio y realizaría más procesos para reorganizar el array.
+    <li>
+      join() y split(), ¿son métodos de String o de Array?
+    </li>
+    Join() es un método de Array para convertir en String. Mientras que split() es un método de Strings que los convierte en Array.
+    <li>
+          splice()
+          <ol>
+            <li>
+              Utilidad
+            </li>
+            splice(): Cambia el contenido de un array elimando elementos existentes o añadiendo nuevos elementos.<br>Sintaxis: array.splice(start, deleteCount[, item1[, item2[, ...]]])
+            <li>
+              Indica significado del primer argumento admitido: índice, cantidad o contenido
+            </li>
+            El primer argumento es el índice. Es el lugar desde donde va a comenzar a eliminar elementos del array.
+            <li>
+              Indica significado del segundo argumento admitido: índice, cantidad o contenido
+            </li>
+            El segundo argumento es la cantidad de elementos que quieres eliminar del array. Si este parámentro es 0 no se elimina ningún elemento del array, y si este valor es mayor que el número de elementos que contiene el array, se borrarán todos.
+            <li>
+              Indica significado del resto de argumentos admitidos: índice, cantidad o contenido
+            </li>
+            El resto de argumentos indican el valor del elemento que se quiere añadir al array. Si no se especifica este argumento, splice() solo eliminará elementos, sin añadir ninguno.
+            <li>
+            ¿Modifica el array original?
+            </li>
+            Con el método splice() se modifica el array original.
+          </ol>
+        </li>
+        <li>
+              slice()
+              <ol>
+                <li>
+                  Utilidad
+                </li>
+                Selecciona una parte del array y devuelve un array de con la parte seleccionada.
+                <br>Sintaxis: arr.slice([begin[, end]])
+                <li>
+                  Indica significado del primer argumento admitido: índice, cantidad o contenido
+                </li>
+                  El primer argumento es el índice inicial. Es el lugar desde donde inicia a seleccionar los elementos que queremos extraer.
+                <li>
+                  Indica significado del segundo argumento admitido: índice, cantidad o contenido
+                </li>
+                  El primer argumento es el índice final. Es el lugar donde acaba la selecciónde los elementos que queremos extraer.
+                <li>
+                ¿Modifica el array original?
+                </li>
+                Con el método slice() no se modifica el array original. sino que copia un pedazo de él.
+              </ol>
+            </li>
+            <li>
+              Un Array es un Object:
+              <ol>
+                <li>
+                  Indica resultado de typeof []
+                </li>
+                typeof[] devuelve <b>"object"</b>
+                <li>
+                  Método forEach() de un array. Indica utilidad y si funciona en todos los navegadores. Entrega un pequeño código que demuestre su uso
+                </li>
+                Sintaxis: array.forEach(callback[, thisArg])
+                <br>forEach() ejecuta la función callback una vez por cada elemento del array en orden ascendente. No es invocada para índices que han sido eliminados. Sin embargo, sí se ejecuta para elementos del array cuyo valor sea undefined. Funciona para todos los navegadores, aunque en el caso de IE de la versión 9 o superior.
+                <pre>
+                  function arrayDeColores(element, index, array) {
+                    console.log("Color[" + index + "] = " + element);
+                    }
+                  ["Rojo", "Azul", "Verde"].forEach(arrayDeColores);
+                  // logs:
+                  // Color[0] = Rojo
+                  // Color[1] = Azul
+                  // Color[2] = Verde
+                </pre>
+              </ol>
+            </li>
+
+  </ol>
+
+
+  <script type="text/javascript" src="tutorialArray.js"></script>
+</body>
+</html>
