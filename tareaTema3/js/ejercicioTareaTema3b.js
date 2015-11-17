@@ -122,9 +122,7 @@ function Bisiesto(year){
 }
 function calcularDiaSemana() {
   var Xmas95 = new Date(obtenerAnno(), obtenerMes()-1, obtenerDia());
-  alert(Xmas95);
   var weekday = Xmas95.getDay();
-  alert("weekday "+weekday);
   switch (weekday) {
     case 0:
       return "DOMINGO";
