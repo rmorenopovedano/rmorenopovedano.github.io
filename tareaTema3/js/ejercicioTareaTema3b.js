@@ -121,41 +121,44 @@ function Bisiesto(year){
 	return ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) ? "SI" : "NO";
 }
 function calcularDiaSemana() {
-  var Xmas95 = new Date(obtenerDia(), obtenerMes(), obtenerAnno());
+  var Xmas95 = new Date(obtenerAnno(), obtenerMes()-1, obtenerDia());
+  alert(Xmas95);
   var weekday = Xmas95.getDay();
+  alert("weekday "+weekday);
   switch (weekday) {
     case 0:
-      return "LUNES";
+      return "DOMINGO";
       break;
     case 1:
-      return "MARTES";
+      return "LUNES";
       break;
     case 2:
-      return "MIÉRCOLES";
+      return "MARTES";
       break;
     case 3:
-      return "JUEVES";
+      return "MIÉRCOLES";
       break;
     case 4:
-      return "VIERNES";
+      return "JUEVES";
       break;
     case 5:
-      return "SÁBADO";
+      return "VIERNES";
       break;
     case 6:
-      return "DOMINGO";
+      return "SÁBADO";
       break;
 
   }
 }
 function obtenerDia(){
-  return document.getElementById('dia').value;
+  return parseInt(document.getElementById('dia').value);
+
 }
 function obtenerMes(){
-  return document.getElementById('mes').value;
+  return parseInt(document.getElementById('mes').value);
 }
 function obtenerAnno(){
-  return document.getElementById('anno').value;
+  return parseInt(document.getElementById('anno').value);
 }
 function calcularCoseno(){
   var coseno90 = Math.cos(Math.PI/2);
