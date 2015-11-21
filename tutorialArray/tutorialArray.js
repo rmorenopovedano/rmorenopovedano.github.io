@@ -108,7 +108,7 @@ Write a function addClass(obj, cls) which adds a class cls, but only if it doesn
 function arrayIsobject(){
   //What will be the result? Why?
   var arr =['a', 'b'];
-  arr.push( function() { alert(this) } );
+  arr.push(function() { alert(this) } );
   arr[arr.length-1]();
   console.log("arr[arr.length-1]() = arr[2] . Por tanto mostraría un alert con el contenido del array");
 }

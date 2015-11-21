@@ -12,7 +12,7 @@ document.getElementById("button").addEventListener("click", function(){
     abrirVentana();
 });
 function abrirVentana(){
-  var nuevaVentana=window.open("","", "top=0, left=0, width=300, height=200");
+  var nuevaVentana=window.open("","", "width=300, height=200, top=0, left=0");
   nuevaVentana.document.write("<html>");
   nuevaVentana.document.write("<head>");
   nuevaVentana.document.write("<title>Ventana de prueba</title>");
