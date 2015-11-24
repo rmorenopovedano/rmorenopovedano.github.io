@@ -1,0 +1,199 @@
+body{
+  background-image: url("../img/background.png");
+  background-size: cover;
+
+}
+#principal{
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 5px 5px 20px #ff6574;
+}
+header{
+  background: linear-gradient(to top,#ffaa65, #ff6574);
+  padding:15px;
+  margin:0;
+  text-align: center;
+}
+
+h1{
+  color: rgba(255,230,0,0.5);
+  text-shadow: 3px 3px 0px #000,
+	-1px 1px 0px #000,
+	1px -1px 0px #000,
+	-1px -1px 0px #000;
+  animation-name: letras;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes letras{
+  0% {color: rgba(255,230,0,0.5);}
+  20% {color: white;}
+  40% {color: white;}
+  60% {color: white;}
+  80% {color: rgba(255,230,0,0.5);}
+  100% {color: rgba(255,230,0,0.5);}
+}
+
+#centro{
+  position: relative;
+  background: white;
+  width: 100%;
+  margin:0;
+  min-height:500px;
+  display:flex;
+}
+nav{
+  display: inline-block;
+  width: 10%;
+  vertical-align: top;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav ul li{
+  background: pink;
+  margin:10px;
+  padding:5px;
+  text-align: center;
+  box-shadow: inset 5px 5px 5px white;
+}
+nav ul li a{
+text-decoration: none;
+color: black;
+}
+nav ul li:hover{
+color: white;
+background: rgba(70, 235, 151, 0.82);
+}
+nav ul li a:hover{
+color: white;
+}
+main{
+  display: inline-block;
+  width: 65%;
+  background: white;
+  padding-left: 10px;
+
+}
+aside{
+  text-align: center;
+  display: inline-block;
+  background: #ffaa65;
+  width: 20%;
+  vertical-align: top;
+  padding: 10px;
+}
+footer{
+  background: linear-gradient(to bottom,#ffaa65, #ff6574);
+  padding: 10px;
+  text-align: center;
+  color: rgba;
+  text-shadow: 1px 1px 0px white,
+  	-1px 1px 0px white,
+  	1px -1px 0px white,
+  	-1px -1px 0px white;
+}
+#mifoto{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;text-shadow: 3px 3px 5px #FFF;
+  margin-top: 20px;
+  border-radius: 20px 0 20px 0;
+  border: 1px #ff6574 solid;
+  transition:  2s;
+}
+#mifoto:hover{
+  transform:matrix(1, -0.1, -0.1, 1.1, -10, -10);
+}
+.twitter-timeline{
+  bottom: 0;
+  position: relative;
+}
+h3{
+  text-align: center;
+}
+#iconoUsuario{
+  display: inline-block;
+  vertical-align: middle;
+  transition: 1s;
+}
+#iconoUsuario:hover{
+  transform: rotate(360deg);
+}
+#spanUsuario{
+  display: inline-block;
+  vertical-align: middle;
+}
+#spanUsuario:hover{
+  transform: scale(1.1);
+}
+#iconoTwitter{
+  display: inline-block;
+  vertical-align: middle;
+  transition: 1s;
+}
+#iconoTwitter:hover{
+  transform: rotate(360deg);
+}
+#spanTwitter{
+  display: inline-block;
+  vertical-align: middle;
+}
+#spanTwitter:hover{
+  transform: scale(1.1);
+}
+#iconoCiudad{
+  display: inline-block;
+  vertical-align: middle;
+  transition: 1s;
+}
+#iconoCiudad:hover{
+  transform: rotate(360deg);
+}
+#spanCiudad{
+  display: inline-block;
+  vertical-align: middle;
+}
+#spanCiudad:hover{
+  transform: scale(1.1);
+}
+section{
+  margin: 50px;
+}
+#formulario{
+  width: 60%;
+  border: 1px solid grey;
+  background: rgba(255,0,0,0.3);
+  margin: 0 auto;
+  border-radius: 10px 10px;
+  box-shadow: 5px 5px  5px  #ff6574;
+  transition: 1s;
+}
+#formulario:hover{
+  transform: scale(1.2, 1.2);
+}
+input{
+  margin:10px;
+  border-radius:10px 10px;
+}
+input[required]{
+  border-color: grey;
+  box-shadow: 1px 1px 5px grey;
+}
+input:invalid{
+  border-color:red;
+  box-shadow: 1px 1px 20px red;
+  border-radius:10px 10px;
+}
+input:required:valid {
+border: 1px solid green;
+box-shadow: 1px 1px 20px green;
+border-radius: 10px 10px;
+}
+table{
+  margin:0 auto;
+}
+article{
+  text-align: justify;
+}

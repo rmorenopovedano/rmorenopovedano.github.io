@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/practica10.css">
+
+  <title>Raúl Moreno Povedano</title>
+</head>
+<body>
+  <div id="principal">
+    <header>
+      <h1>Blog Raúl Moreno Povedano</h1>
+    </header>
+    <div id="centro">
+      <aside>
+        <img id="mifoto" src="img/foto.png">
+        <p><canvas id="iconoUsuario" width="50" height="50"></canvas><span id="spanUsuario">Raúl Moreno Povedano</span>
+        </p>
+        <p><canvas id="iconoTwitter" width="50" height="50"></canvas><span id="spanTwitter">@rmorenopovedano</span>
+        </p>
+        <p><canvas id="iconoCiudad" width="50" height="50"></canvas><span id="spanCiudad">Córdoba</span>
+        </p>
+        <a class="twitter-timeline" href="https://twitter.com/rmorenopovedano" data-widget-id="668402027106574336">Tweets por el @rmorenopovedano.</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </aside><nav>
+        <ul>
+          <li><a href="practica10.html">Home</a></li>
+          <li><a href="practica10.html">Noticias</a></li>
+          <li><a href="formulario.html">Formulario</a></li>
+        </ul>
+      </nav><main>
+        <section>
+          <article>
+            <h3>Formulario de prueba</h3>
+            <div id="formulario">
+              <table>
+                <form action="#">
+                  <tr>
+                    <td>
+                      <label for="nombre">Introduce tu usuario: </label>
+                    </td>
+                    <td>
+                        <input type="text" title="usuario obligatorio" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" placeholder="2-20 caracteres" id="usuario" required name="usuario">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="nombre">Introduce tu email: </label>
+                    </td>
+                    <td>
+                      <input type="text" title="mail@example.com" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" name="email" required placeholder="mail@example.com"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="submit" name="submit" id="submit" value="Enviar">
+                    </td>
+                    <td>
+
+                    </td>
+                  </tr>
+                </form>
+              </table>
+            </div>            
+          </article>
+        </section>
+      </main>
+    </div>
+  <footer>
+    Pie de página
+  </footer>
+    </div>
+    <script type="text/javascript" src="js/canvas.js"></script>
+</body>
+</html>
