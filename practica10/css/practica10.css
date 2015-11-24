@@ -14,7 +14,11 @@ header{
   margin:0;
   text-align: center;
 }
-
+svg{
+  position: absolute;
+  top: 30px;
+  left: 180px;
+}
 h1{
   color: rgba(255,230,0,0.5);
   text-shadow: 3px 3px 0px #000,
@@ -160,6 +164,7 @@ h3{
 }
 section{
   margin: 50px;
+  display: block;
 }
 #formulario{
   width: 60%;
@@ -176,6 +181,7 @@ section{
 input{
   margin:10px;
   border-radius:10px 10px;
+  padding-left: 5px;
 }
 input[required]{
   border-color: grey;
@@ -196,4 +202,5 @@ table{
 }
 article{
   text-align: justify;
+  float:left;
 }

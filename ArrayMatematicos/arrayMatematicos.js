@@ -10,7 +10,7 @@ Una vez creada la clase, demuestra su funcionamiento en una página bien diseña
 function ArraysMatematicos(fila,columna){
   this.fila=fila;
   this.columna=columna;
-  this.matriz=new Array();
+  this.matriz;
 }
 ArraysMatematicos.prototype.generarMatriz = function () {
 	var m1 = new Array(this.fila);
@@ -20,7 +20,7 @@ ArraysMatematicos.prototype.generarMatriz = function () {
 			m1[f][c] = generarAleatorio();
 		};
 	};
-	return m1;
+  this.matriz=m1;
 };
 ArraysMatematicos.prototype.sumar=function(s2){
   var suma;
@@ -28,6 +28,7 @@ ArraysMatematicos.prototype.sumar=function(s2){
     return;
   }else{
     suma=new ArraysMatematicos(this.fila, this.columna);
+    suma.generarMatriz()
     for (var i = 0; i < this.fila; i++) {
       for (var j= 0; j < this.columna; j++) {
         suma.matriz[i][j]=this.matriz[i][j]+s2.matriz[i][j];
@@ -61,15 +62,14 @@ ArraysMatematicos.prototype.mostrar = function (){
 	return cadena;
 };
 ArraysMatematicos.prototype.trasponer = function() {
-	var traspuesta = new ArrayMatematico(this.columna, this.fila);
-
+	var traspuesta = new ArraysMatematicos(this.columna, this.fila);
+  traspuesta.generarMatriz();
 	for (var f = 0; f < this.columna; f++) {
 		for (var c = 0; c < this.fila; c++) {
 			traspuesta.matriz[f][c] = this.matriz[c][f];
 		};
 	};
-
-	return traspuesta;
+  this.matriz=traspuesta.matriz;
 };
 ArraysMatematicos.prototype.coincidenDimensiones=function(s2){
   if(this.fila===s2.fila && this.columna===s2.columna)
@@ -84,8 +84,14 @@ function generarAleatorio(){
 window.addEventListener("load", function(){
    document.getElementById("sumar").addEventListener("click", function(){
       var matriz1=new ArraysMatematicos(2,2);
-        matriz1=matriz1.generarMatriz;
-        var mostrar=matriz1.mostrar;
-        document.getElementById('resultado').innerHTML=mostrar;
+      var matriz2=new ArraysMatematicos(2,2);
+      matriz1.generarMatriz();
+      matriz2.generarMatriz();
+      var mostrar1=matriz1.mostrar();
+      var mostrar2=matriz2.mostrar();
+      var matrizResultado=matriz1.sumar(matriz2);
+        document.getElementById('resultado').innerHTML=matrizResultado.mostrar();
+        var matrizTraspuesta=matrizResultado.trasponer();
+        document.getElementById('traspuesta').innerHTML=matrizTraspuesta.mostrar();
     });
 });
