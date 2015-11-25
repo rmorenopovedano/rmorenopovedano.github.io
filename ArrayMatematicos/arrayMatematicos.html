@@ -2,12 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Array Matemáticos Raúl Moreno Povedano</title>
+  <title>Arrays Matemáticos Raúl Moreno Povedano</title>
 </head>
 <body>
-  <input type="button" id="sumar" value="sumar">
-  <span id="resultado"></span>
-  <span id="traspuesta"></span>
+  <h1>Arrays Matemáticos</h1>
+  <form>
+    Matriz 1 (Filas): <input type="number" id="fila1">
+    Matriz 1 (Columnas): <input type="number" id="columna1"><span id="error" style="color:red"></span>
+  </form>
+  <form>
+    Matriz 2 (Filas): <input type="number" id="fila2">
+    Matriz 2 (Columnas): <input type="number" id="columna2">
+    <input type="button" id="crear" value="Crear matrices">
+  </form>
+  <table>
+    <tr>
+      <td>
+        <input type="button" id="sumar" value="Sumar">
+      </td>
+      <td>
+        <input type="button" id="restar" value="Restar">
+      </td>
+      <td>
+        <input type="button" id="multiplicar" value="Multiplicar">
+      </td>
+      <td>
+        <input type="button" id="trasponer" value="Trasponer">
+      </td>
+    </tr>
+  </table>
+
+  <p>
+    Matriz 1:<span id="sumando1"></span>
+  </p>
+  <p>
+    Matriz 2:<span id="sumando2"></span>
+  </p>
+  <p>
+    <b>Suma:</b> <span id="resultadoSuma"></span>
+  </p>
+  <p>
+    <b>Resta:</b> <span id="resultadoResta"></span>
+  </p>
+  <p>
+    <b> Multiplicación:</b>  <span id="resultadoMultiplicacion"></span>
+  </p>
+  <p>
+    <b>Traspuesta de las matrices:</b>
+  </p>
+  <p>
+    Matriz 1:<span id="traspuesta1"></span>
+  </p>
+  <p>
+    Matriz 2:<span id="traspuesta2"></span>
+  </p>
 <script type="text/javascript" src="arrayMatematicos.js"></script>
 </body>
 </html>
