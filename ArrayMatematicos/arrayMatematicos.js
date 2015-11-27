@@ -96,7 +96,10 @@ ArraysMatematicos.prototype.trasponer = function() {
 ArraysMatematicos.prototype.coincidenDimensiones=function(matriz2){
   if(this.fila===matriz2.fila && this.columna===matriz2.columna)
     return true;
-  else return false;
+  else {
+    throw new DimensionesInvalidasException("No se pueden sumar o restar matrices de distinta dimensión");
+    return false;
+  }
 }
 function generarAleatorio(){
 	return Math.floor(Math.random()*10);
@@ -114,57 +117,72 @@ function columnas2(){
   return document.getElementById('columna2').value;
 }
 function validarCampos(){
-  if(filas1()=="" || columnas1()=="" || filas2()=="" || columnas2()=="")
+  if(filas1()=="" || columnas1()=="" || filas2()=="" || columnas2()==""){
+    throw new Error("Introduce campos válidos");
     return false;
+  }
   else
     return true;
 }
-//m3=m1.sumar(m2);
-//m1.trasponer();
+function DimensionesInvalidasException(mensaje){
+  this.mensaje=mensaje;
+}
+DimensionesInvalidasException.prototype=new Error();
+
 window.addEventListener("load", function(){
   var matriz1;
   var matriz2;
    document.getElementById("crear").addEventListener("click", function(){
-     if(validarCampos()){
-       document.getElementById('error').innerHTML="";
-       matriz1=new ArraysMatematicos(filas1(), columnas1());
-       matriz1.generarMatriz();
-       var mostrar1=matriz1.mostrar();
-       document.getElementById('sumando1').innerHTML=mostrar1;
-       matriz2=new ArraysMatematicos(filas2(), columnas2());
-       matriz2.generarMatriz();
-       var mostrar2=matriz2.mostrar();
-       document.getElementById('sumando2').innerHTML=mostrar2;
-     }
-     else{
-      document.getElementById('error').innerHTML="Introduce valores válidos";
-     }
+    try {
+      if(validarCampos()){
+        document.getElementById('error').innerHTML="";
+        matriz1=new ArraysMatematicos(filas1(), columnas1());
+        matriz1.generarMatriz();
+        var mostrar1=matriz1.mostrar();
+        document.getElementById('sumando1').innerHTML=mostrar1;
+        matriz2=new ArraysMatematicos(filas2(), columnas2());
+        matriz2.generarMatriz();
+        var mostrar2=matriz2.mostrar();
+        document.getElementById('sumando2').innerHTML=mostrar2;
+      }
+    } catch (e) {
+      document.getElementById('error').innerHTML=e.message;
+    }
    });
    document.getElementById("sumar").addEventListener("click", function(){
-     if(matriz1.coincidenDimensiones(matriz2)){
-       var matrizSuma=matriz1.sumar(matriz2);
-       document.getElementById('resultadoSuma').innerHTML=matrizSuma.mostrar();
-     }else{
-         document.getElementById('resultadoSuma').innerHTML="No se pueden sumar matrices de distinta dimensión";
-     }
+     try {
+       if(matriz1.coincidenDimensiones(matriz2)){
+         var matrizSuma=matriz1.sumar(matriz2);
+         document.getElementById('resultadoSuma').innerHTML=matrizSuma.mostrar();
+       }
+     } catch (e) {
+     document.getElementById('resultadoSuma').innerHTML=e.mensaje;
+   }
     });
     document.getElementById("restar").addEventListener("click", function(){
-      if(matriz1.coincidenDimensiones(matriz2)){
-        var matrizResta=matriz1.restar(matriz2);
-        document.getElementById('resultadoResta').innerHTML=matrizResta.mostrar();
-      }else{
-          document.getElementById('resultadoResta').innerHTML="No se pueden restar matrices de distinta dimensión";
+      try {
+        if(matriz1.coincidenDimensiones(matriz2)){
+          var matrizResta=matriz1.restar(matriz2);
+          document.getElementById('resultadoResta').innerHTML=matrizResta.mostrar();
+        }
+      } catch (e) {
+        document.getElementById('resultadoResta').innerHTML=e.mensaje;
       }
      });
      document.getElementById("multiplicar").addEventListener("click", function(){
-       if(matriz1.columna == matriz2.fila){
-         var matrizMultiplicacion=matriz1.multiplicar(matriz2);
-         document.getElementById('resultadoMultiplicacion').innerHTML=matrizMultiplicacion.mostrar();
-       }
-       else{
-         document.getElementById('resultadoMultiplicacion').innerHTML="Las columnas de la primera matriz deben ser igual a las filas de la segunda matriz para poder multiplicarse.";
-       }
+      try {
+        if(matriz1.columna == matriz2.fila){
+          var matrizMultiplicacion=matriz1.multiplicar(matriz2);
+          document.getElementById('resultadoMultiplicacion').innerHTML=matrizMultiplicacion.mostrar();
 
+        }
+        else{
+          throw new DimensionesInvalidasException("Las columnas de la primera matriz deben ser igual a las filas de la segunda matriz para poder multiplicarse.")
+
+        }
+      } catch (e) {
+        document.getElementById('resultadoMultiplicacion').innerHTML=e.mensaje;
+      }
       });
      document.getElementById("trasponer").addEventListener("click", function(){
        var matriz1Traspuesta=matriz1.trasponer();
