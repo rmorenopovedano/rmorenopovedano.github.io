@@ -9,7 +9,6 @@ Utiliza prototype para los métodos
 //función que valida un gato
 function validarGato(){
   if(validarDia(getDia(),getMes(),getAnno()) && getNombre().trim()!=null && getPeso().trim()!=null){
-      alert(getAnno());
       return true;
   }
 
