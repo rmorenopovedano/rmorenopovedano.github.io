@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/practica11.css">
+  <title>Raúl Moreno Povedano</title>
+</head>
+<body>
+  <div id="contenedor">
+  <header>
+    <div id="nombre">
+      Raúl Moreno Povedano
+    </div>
+    <div id="titulo">
+      GESTOR DE TAREAS
+    </div>
+    <div id="ciclo">
+      2ºDAW
+    </div>
+  </header>
+  <div id="principal">
+    <aside>
+      <div id="tarea">
+        <h3>NUEVA TAREA</h3>
+        <input type="button" name="button" value="+">
+      </div>
+      <table id="tabla_formulario">
+        <caption id="caption_formulario">
+          Asignatura
+        </caption>
+        <form action="#">
+          <tr>
+            <th>Nombre</th>
+            <th>Fecha entrega</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <td><input type="text" name="nombre1" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"></td>
+            <td><input type="date" name="fecha2" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"></td>
+            <td><textarea placeholder="opcional"></textarea></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="nombre2" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"></td>
+            <td><input type="date" name="fecha2" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$"></td>
+            <td><textarea placeholder="opcional"></textarea></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="submit" name="submit" value="Enviar"></td>
+            <td><input type="checkbox" id="aceptar" />
+              <label for="aceptar">Guardar</label>
+              </p></td>
+          </tr>
+        </form>
+      </table>
+    </aside>
+    <nav>
+      <ul>
+        <li><a href="#" id="php">PHP</a></li>
+        <li><a href="#" id="js">JAVASCRIPT</a></li>
+        <li><a href="#" id="html">HTML5</a></li>
+        <li><a href="#" id="despliegue">DESPLIEGUE</a></li>
+        <li><a href="#" id="android">ANDROID</a></li>
+        <li><a href="#" id="empresas">EMPRESAS</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <article>
+          <table id="tabla_calendario">
+            <caption>
+              Calendario
+            </caption>
+            <tr>
+              <th>LUN</th>
+              <th>MAR</th>
+              <th>MIE</th>
+              <th>JUE</th>
+              <th>VIE</th>
+              <th>SAB</th>
+              <th>DOM</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td ><div class="php">
+                PHP
+              </div><div class="dia">2</div></td>
+              <td>3</td>
+              <td>4</td>
+              <td ><div class="empresas">
+                EMPRE
+              </div><div class="dia">5</div></td>
+              <td>6</td>
+              <td ><div class="android">
+                ANDROID
+              </div><div class="dia">7</div></td>
+            </tr>
+            <tr>
+              <td ><div class="despliegue">
+                DESPLI
+              </div><div class="dia">8</div></td>
+              <td>9</td>
+              <td>10</td>
+              <td ><div class="js">
+                JS
+              </div><div class="dia">11</div></td>
+              <td>12</td>
+              <td ><div class="diseno">
+                DISEÑO
+              </div><div class="dia">29</div></td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>16</td>
+              <td>17</td>
+              <td>18</td>
+              <td ><div class="php">
+                PHP
+              </div><div class="dia">19</div></td>
+              <td>20</td>
+              <td ><div class="despliegue">
+                DESPLI
+              </div><div class="dia">21</div></td>
+            </tr>
+            <tr>
+              <td>22</td>
+              <td>23</td>
+              <td ><div class="js">
+                JS
+              </div><div class="dia">24</div></td>
+              <td>25</td>
+              <td>26</td>
+              <td ><div class="android">
+                ANDROID
+              </div><div class="dia">27</div></td>
+              <td>28</td>
+            </tr>
+            <tr>
+              <td ><div class="diseno">
+                DISEÑO
+              </div><div class="dia">29</div></td>
+              <td>30</td>
+              <td ><div class="empresas">
+                EMPRE
+              </div><div class="dia">31</div></td>
+              <td class="sindia"></td>
+              <td class="sindia"></td>
+              <td class="sindia"></td>
+              <td class="sindia"></td>
+            </tr>
+          </table>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <h4>Realizado para Diseño Web 2015</h4>
+  </footer>
+  </div>
+<script type="text/javascript" src="js/practica11.js"></script>
+</body>
+</html>
