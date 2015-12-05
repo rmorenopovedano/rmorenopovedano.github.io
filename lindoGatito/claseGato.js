@@ -16,27 +16,27 @@ function Gato(nombre, raza, dia,mes, anno, peso){
   this.estado="jugando";
 }
 Gato.prototype.jugar=function(){
-  this.peso--;
-  if(this.peso<0){
-      this.peso=0;
-      this.estado="muerto";
-      return "Está muerto por exhausto";
-    }
-  else{
-    this.estado="jugando"
-    return "Está jugando";
-  }
+        this.peso--;
+        if(this.peso<1){
+            this.peso=0;
+            this.estado="muerto";
+            return this.nombre+" ha muerto de cansancio";
+        }
+        else{
+            this.estado="jugando"
+            return this.nombre+" está jugando";
+        }
 }
 Gato.prototype.comer=function(){
   this.peso++;
   if(this.peso<15){
     this.estado="comiendo";
-    return "Está comiendo";
+    return this.nombre+" está comiendo";
   }
   else{
     this.peso=15;
     this.estado="muerto";
-    return "Está muerto por sobrepeso";
+    return this.nombre+" está muerto por sobrepeso";
   }
 
 }
@@ -45,11 +45,10 @@ Gato.prototype.dormir=function(){
   return this.nombre+" está durmiendo... Zzzzz";
 }
 Gato.prototype.mostrarInformacion = function () {
-  return '<p><strong>Nombre: </strong>' + this.nombre
-        + '. <strong>Fecha de nacimiento: </strong>' + this.dia + '/' + this.mes + '/' + this.anno
-        + '. <strong>Raza: </strong>' + this.raza
-        + '. <strong>Peso (kg): </strong>' + this.peso + 'kg.</p>'
-        + 'estado: '+this.estado;
+  return '<p><strong>Nombre: </strong>' + this.nombre+'</p>'
+        + '<p><strong>Fecha de nacimiento: </strong>' + this.dia + '/' + this.mes + '/' + this.anno+'</p>'
+        + '<p><strong>Raza: </strong>' + this.raza+'</p>'
+        + '<p><strong>Peso (kg): </strong>' + this.peso+' kg. '+ '</p>';
 }
 Gato.prototype.mostrarImagen=function(){
   return this.raza+"_"+this.estado+".jpg";

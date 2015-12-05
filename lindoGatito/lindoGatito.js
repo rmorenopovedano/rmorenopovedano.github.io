@@ -8,21 +8,28 @@ Utiliza prototype para los métodos
 */
 //función que valida un gato
 function validarGato(){
-  if(validarDia(getDia(),getMes(),getAnno()) && getNombre().trim()!=null && getPeso().trim()!=null){
-      return true;
-  }
+    try {
+        validarNombre(getNombre());
+        validarDia(getDia(), getMes(), getAnno());
+        validarMes(getMes());
+        validarAnno(getAnno());
+        validarPeso(getPeso());
+        return true;
+    } catch (e) {
+        document.getElementById('informacion').innerHTML= e.message;
+    }
 
-  else return false;
 }
 
 window.addEventListener("load", function(){
   document.getElementById('crear').addEventListener("click", function(){
     if(!validarGato()){
-      document.getElementById('informacion').innerHTML="No se ha podido crear ningún gato";
+      document.getElementById('informacion2').innerHTML="No se ha podido crear ningún gato";
       return;
-    }
-    else{
-      var nuevaVentana=window.open("","","top=50, left=300, width=500, height=500");
+    }else{
+      document.getElementById('informacion2').innerHTML="";
+        document.getElementById('informacion').innerHTML= "";
+      var nuevaVentana=window.open("","","top=50, left=400, width=500, height=500");
       var gato=new Gato(getNombre(), getRaza(), getDia(), getMes(), getAnno(), getPeso());
       nuevaVentana.document.open();
       nuevaVentana.document.write('<!DOCTYPE html>'
@@ -30,12 +37,14 @@ window.addEventListener("load", function(){
               + '<head>'
               + '<meta charset="UTF-8">'
               + '<title>Gato</title>'
+              + '<link rel="stylesheet" href="lindoGatito2.css">'
               + '</head>'
               + '<body>'
-              + '<div id="imagen"><img id="imagen"src="img/'+gato.mostrarImagen()+'"></div>'
+              + '<h1>Gato: '+gato.raza+'</h1>'
+              + '<div id="imagen"><img src="img/'+gato.mostrarImagen()+'"></div>'
               + '<div id="informacion">'+gato.mostrarInformacion()+'</div>'
-              + '<div id="edad"></div>'
               + '<div id="estado"></div>'
+              + '<div id="edad"></div>'
               + '<input type="button" id="jugar" value="Jugar">'
               + '<input type="button" id="comer" value="Comer">'
               + '<input type="button" id="dormir" value="Dormir">'
@@ -44,24 +53,39 @@ window.addEventListener("load", function(){
               + '</html>');
               nuevaVentana.document.close();
     }
+      function desactivarBotones(){
+          nuevaVentana.document.getElementById('jugar').disabled=true;
+          nuevaVentana.document.getElementById('comer').disabled=true;
+          nuevaVentana.document.getElementById('dormir').disabled=true;
+      }
     nuevaVentana.document.getElementById('jugar').addEventListener("click", function(){
-      nuevaVentana.document.getElementById('estado').innerHTML=gato.jugar();
-      nuevaVentana.document.getElementById('informacion').innerHTML=gato.mostrarInformacion();
-      nuevaVentana.document.getElementById('imagen').src="img/"+gato.mostrarImagen();
+        if(gato.estado=="muerto"){
+            desactivarBotones();
+        }else{
+            nuevaVentana.document.getElementById('estado').innerHTML = gato.jugar();
+            nuevaVentana.document.getElementById('informacion').innerHTML = gato.mostrarInformacion();
+            nuevaVentana.document.getElementById('imagen').innerHTML = "<img src='img/" + gato.mostrarImagen() + "'>";
+        }
+
     });
     nuevaVentana.document.getElementById('comer').addEventListener("click", function(){
-      nuevaVentana.document.getElementById('estado').innerHTML=gato.comer();
-      nuevaVentana.document.getElementById('informacion').innerHTML=gato.mostrarInformacion();
-      nuevaVentana.document.getElementById('imagen').src="img/"+gato.mostrarImagen();
-        console.log(gato.mostrarImagen());
+        if(gato.estado=="muerto"){
+            desactivarBotones()
+
+        }else{
+            nuevaVentana.document.getElementById('estado').innerHTML=gato.comer();
+            nuevaVentana.document.getElementById('informacion').innerHTML=gato.mostrarInformacion();
+            nuevaVentana.document.getElementById('imagen').innerHTML="<img src='img/"+gato.mostrarImagen()+"'>";
+        }
+
     });
     nuevaVentana.document.getElementById('dormir').addEventListener("click", function(){
       nuevaVentana.document.getElementById('estado').innerHTML=gato.dormir();
       nuevaVentana.document.getElementById('informacion').innerHTML=gato.mostrarInformacion();
-      nuevaVentana.document.getElementById('imagen').src="img/"+gato.mostrarImagen();
+        nuevaVentana.document.getElementById('imagen').innerHTML="<img src='img/"+gato.mostrarImagen()+"'>";
     });
     nuevaVentana.document.getElementById('mostrarEdad').addEventListener("click", function(){
-      nuevaVentana.document.getElementById('edad').innerHTML=gato.calcularEdad();
+      nuevaVentana.document.getElementById('edad').innerHTML="<strong>Edad: </strong>"+gato.calcularEdad()+" años";
     });
   });
 

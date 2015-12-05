@@ -1,0 +1,12 @@
+*{
+    text-align: center;
+}
+body{
+    background: #e4b9c0;
+}
+h1{
+    margin:2px;
+}
+#estado,#informacion,#edad{
+    font-size: 1.1em;
+}
