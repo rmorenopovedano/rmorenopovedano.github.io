@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raúl Moreno Povedano Formulario Completito</title>
+</head>
+<body>
+<table class="table">
+    <form action="" method="post">
+        <tr>
+            <td><label for="nombre">Nombre:</label></td>
+            <td><input type="text" name="nombre" id="nombre" value="" placeholder="obligatorio"><span class="error"></span></td>
+        </tr>
+        <tr>
+            <td><label for="apellido1">Primer apellido:</label></td>
+            <td><input type="text" name="apellido1" id="apellido1" value="" placeholder="obligatorio"><span class="error"></span></td>
+        </tr>
+        <tr>
+            <td><label for="apellido2">Segundo apellido:</label></td>
+            <td><input type="text" name="apellido2" id="apellido2" value="" placeholder="obligatorio"><span class="error"></span></td>
+        </tr>
+        <tr>
+            <td><label for="fecha">Fecha Nacimiento:</label></td>
+            <td><input type="text" name="fecha" id="fecha" placeholder="dd/mm/aaaa"></td>
+        </tr>
+        <tr>
+            <td><label for="ciudad">Localidad:</label></td>
+            <td><select size="1" name="ciudad" id="ciudad">
+                <option value="cordoba">Córdoba</option>
+                <option value="malaga">Málaga</option>
+                <option value="sevilla">Sevilla</option>
+                <option value="huelva">Huelva</option>
+                <option value="almería">Almería</option>
+                <option value="granada">Granada</option>
+                <option value="jaen" >Jaén</option>
+                <option value="cadiz" >Cádiz</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="text" name="email" id="email" placeholder="example@example.com"></td>
+        </tr>
+        <tr>
+            <td><label for="dni">DNI:</label></td>
+            <td><input type="text" name="dni" id="dni" placeholder="00000000X"></td>
+        </tr>
+        <tr>
+            <td><label for="telefono">Teléfono:</label></td>
+            <td><input type="text" name="telefono" id="telefono" placeholder="XXXXXXXXX"></td>
+        </tr>
+        <tr>
+            <td><label for="cuenta">Nº Cuenta Corriente:</label></td>
+            <td><input type="text" name="cuenta" id="cuenta" placeholder="0000-0000-00-000000000"></td>
+        </tr>
+        <tr>
+            <td><label for="url">Web personal:</label></td>
+            <td><input type="text" name="url" id="url" placeholder="http://www.example.com"></td>
+        </tr>
+        <tr>
+            <td><label for="titulacion">Titulacion:</label></td>
+            <td><input type="radio" name="titulacion" checked value="ESO">ESO
+                <input type="radio" name="titulacion" value="Bachiller">Bachiller
+                <input type="radio" name="titulacion" value="Grado">Grado
+                <input type="radio" name="titulacion" value="Doctorado">Doctorado</td>
+        </tr>
+        <tr>
+            <td><label for="idiomas">Idiomas:</label></td>
+            <td><input type="checkbox" name="idiomas[]" value="ingles" checked>Inglés<br>
+                <input type="checkbox" name="idiomas[]" value="frances">Francés<br>
+                <input type="checkbox" name="idiomas[]" value="aleman">Alemán<br>
+                <input type="checkbox" name="idiomas[]" value="otro">Otro<br></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="descripcion">Breve descripción:</label></td>
+            <td><textarea rows="5" name="descripcion" cols="20" placeholder="no obligatorio"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" name="enviar" id="enviar" value="Enviar"></td>
+        </tr>
+    </form>
+</table>'
+<div id="info"></div>
+<script type="text/javascript" src="formularioCompletito.js"></script>
+<script type="text/javascript" src="validar.js"></script>
+</body>
+</html>
