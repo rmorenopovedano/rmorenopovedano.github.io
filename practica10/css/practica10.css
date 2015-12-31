@@ -112,7 +112,7 @@ footer{
 }
 .twitter-timeline{
   bottom: 0;
-  position: relative;
+  *position: relative;
 }
 h3{
   text-align: center;

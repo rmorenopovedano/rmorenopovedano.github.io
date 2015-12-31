@@ -31,7 +31,7 @@ window.addEventListener("load", function(){
         document.getElementById('informacion').innerHTML= "";
       var nuevaVentana=window.open("","","top=50, left=400, width=500, height=500");
       var gato=new Gato(getNombre(), getRaza(), getDia(), getMes(), getAnno(), getPeso());
-      nuevaVentana.document.open();
+      //nuevaVentana.document.open();
       nuevaVentana.document.write('<!DOCTYPE html>'
               + '<html lang="es">'
               + '<head>'
