@@ -1,7 +1,6 @@
 /**
  * Created by Raul on 15/12/2015.
  * Formulario completito
-
  Crea un formulario con todos los tipos de controles y realiza todas las validaciones posibles mediante JavaScript.
  Utiliza el modelo de registro avanzado de eventos según W3C (addEventListener), así como las expresiones regulares.
  Asegúrate de validar lo siguiente:
@@ -14,7 +13,6 @@
  Número de cuenta corriente
  URL
  Asegúrate de que:
-
  Al perder el foco de cada control se comprueba su validación.
  Los errores los muestras mediante css.
  Al enviar el formulario se realizan TODAS LAS VALIDACIONES, yéndose el foco al primer error.
@@ -52,7 +50,7 @@ window.addEventListener("load", function() {
             document.getElementById('fecha').style.border="2px solid green";
     });
     document.getElementById('email').addEventListener('blur',function(){
-       email=document.getElementById('email');
+        email=document.getElementById('email');
         if(!validarEmail(email)){
             document.getElementById('email').style.border="2px solid red";
         }else
@@ -96,4 +94,3 @@ window.addEventListener("load", function() {
         }
     })
 })
-

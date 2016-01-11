@@ -17,25 +17,25 @@ function validarApellido(apellido){
     else return true;
 }
 function validarFecha(fecha){
-        var arrayFecha=fecha.value.split("/");
-        var dia=arrayFecha[0];
+    var arrayFecha=fecha.value.split("/");
+    var dia=arrayFecha[0];
 
-        var mes=arrayFecha[1];
+    var mes=arrayFecha[1];
 
-        var anno=arrayFecha[2];
+    var anno=arrayFecha[2];
 
-        if(validarAnno(anno)){
-            if(validarDia(dia,mes, anno)){
-                return true;
-            }
-            else {
-                fecha.focus();
-                return false;
-            }
-        }else{
+    if(validarAnno(anno)){
+        if(validarDia(dia,mes, anno)){
+            return true;
+        }
+        else {
             fecha.focus();
             return false;
         }
+    }else{
+        fecha.focus();
+        return false;
+    }
 }
 function validarDia(dia, mes, anno){
     if(mes==2){
@@ -144,7 +144,7 @@ function validarIdiomas(idioma) {
 function validarFormulario(){
     if(validarNombre(nombre) && validarApellido(apellido1) && validarApellido(apellido2) && validarFecha(fecha)
         && validarEmail(email)&& validarDNI(dni)&& validarTelefono(telefono) &&
-            validarCuenta(cuenta) && validarUrl(url)){
+        validarCuenta(cuenta) && validarUrl(url)){
         return true;
     }else return false;
 }
