@@ -18,71 +18,73 @@
  Al enviar el formulario se realizan TODAS LAS VALIDACIONES, yéndose el foco al primer error.
  Procura aislar las validaciones del interfaz del usuario (arquitectura de tres capas)
  */
-var nombre, apellido1,apellido2,fecha,ciudad,email, dni, telefono, cuenta,url;
+
 window.addEventListener("load", function() {
-    document.getElementById('nombre').focus();
-    document.getElementById('nombre').addEventListener('blur',function(){
-        nombre=document.getElementById('nombre');
+    var nombre, apellido1,apellido2,fecha,ciudad,email, dni, telefono, cuenta,url;
+    nombre=document.getElementById('nombre');
+    apellido1=document.getElementById('apellido1');
+    apellido2=document.getElementById('apellido2');
+    fecha=document.getElementById('fecha');
+    email=document.getElementById('email');
+    dni=document.getElementById('dni');
+    telefono=document.getElementById('telefono');
+    cuenta=document.getElementById('cuenta');
+    url=document.getElementById('url');
+    nombre.focus();
+    nombre.addEventListener('blur',function(){
         if(!validarNombre(nombre)){
-            document.getElementById('nombre').style.border="2px solid red";
+            nombre.style.border="2px solid red";
         }else
-            document.getElementById('nombre').style.border="2px solid green";
+            nombre.style.border="2px solid green";
     });
-    document.getElementById('apellido1').addEventListener('blur',function(){
-        apellido1=document.getElementById('apellido1');
+    apellido1.addEventListener('blur',function(){
         if(!validarApellido(apellido1)){
-            document.getElementById('apellido1').style.border="2px solid red";
+            apellido1.style.border="2px solid red";
         }else
-            document.getElementById('apellido1').style.border="2px solid green";
+            apellido1.style.border="2px solid green";
     });
     document.getElementById('apellido2').addEventListener('blur',function(){
-        apellido2=document.getElementById('apellido2');
         if(!validarApellido(apellido2)){
-            document.getElementById('apellido2').style.border="2px solid red";
+            apellido2.style.border="2px solid red";
         }else
-            document.getElementById('apellido2').style.border="2px solid green";
+            apellido2.style.border="2px solid green";
     });
-    document.getElementById('fecha').addEventListener('blur',function(){
+    fecha.addEventListener('blur',function(){
         fecha=document.getElementById('fecha');
         if(!validarFecha(fecha)){
-            document.getElementById('fecha').style.border="2px solid red";
+        fecha.style.border="2px solid red";
         }else
-            document.getElementById('fecha').style.border="2px solid green";
+            fecha.style.border="2px solid green";
     });
-    document.getElementById('email').addEventListener('blur',function(){
-        email=document.getElementById('email');
+    email.addEventListener('blur',function(){
         if(!validarEmail(email)){
-            document.getElementById('email').style.border="2px solid red";
+            email.style.border="2px solid red";
         }else
-            document.getElementById('email').style.border="2px solid green";
+            email.style.border="2px solid green";
     });
-    document.getElementById('dni').addEventListener('blur',function(){
-        dni=document.getElementById('dni');
+    dni.addEventListener('blur',function(){
         if(!validarDNI(dni)){
-            document.getElementById('dni').style.border="2px solid red";
+            dni.style.border="2px solid red";
         }else
-            document.getElementById('dni').style.border="2px solid green";
+            dni.style.border="2px solid green";
     });
-    document.getElementById('telefono').addEventListener('blur',function(){
-        telefono=document.getElementById('telefono');
+   telefono.addEventListener('blur',function(){
         if(!validarTelefono(telefono)){
-            document.getElementById('telefono').style.border="2px solid red";
+            telefono.style.border="2px solid red";
         }else
-            document.getElementById('telefono').style.border="2px solid green";
+            telefono.style.border="2px solid green";
     });
-    document.getElementById('cuenta').addEventListener('blur',function(){
-        cuenta=document.getElementById('cuenta');
+    cuenta.addEventListener('blur',function(){
         if(!validarCuenta(cuenta)){
-            document.getElementById('cuenta').style.border="2px solid red";
+            cuenta.style.border="2px solid red";
         }else
-            document.getElementById('cuenta').style.border="2px solid green";
+            cuenta.style.border="2px solid green";
     });
-    document.getElementById('url').addEventListener('blur',function(){
-        url=document.getElementById('url');
+    url.addEventListener('blur',function(){
         if(!validarUrl(url)){
-            document.getElementById('url').style.border="2px solid red";
+            url.style.border="2px solid red";
         }else
-            document.getElementById('url').style.border="2px solid green";
+            url.style.border="2px solid green";
     });
     document.getElementById('enviar').addEventListener("click", function () {
         var titulaciones = document.getElementsByName('titulacion');

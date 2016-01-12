@@ -3,7 +3,7 @@
  */
 function validarNombre(nombre) {
     if (nombre.value == null || nombre.value== "" || /^\s+$/.test(nombre.value)){
-        nombre.focus();
+      //  nombre.focus();
         return false;
     }
     else return true;
@@ -11,7 +11,7 @@ function validarNombre(nombre) {
 
 function validarApellido(apellido){
     if (apellido.value == null || apellido.value == "" || /^\s+$/.test(apellido.value)){
-        apellido.focus();
+      //  apellido.focus();
         return false;
     }
     else return true;
@@ -29,11 +29,11 @@ function validarFecha(fecha){
             return true;
         }
         else {
-            fecha.focus();
+          //  fecha.focus();
             return false;
         }
     }else{
-        fecha.focus();
+       // fecha.focus();
         return false;
     }
 }
@@ -83,7 +83,7 @@ function esBisiesto(year){
 }
 function validarEmail(email){
     if( !(/[\w._-]*@[\w]+[.]+[\w]+/.test(email.value)) ){
-        email.focus();
+      //  email.focus();
         return false;
     }
     else return true;
@@ -92,24 +92,24 @@ function validarDNI(dni){
     var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
 
     if( !(/^\d{8}[A-Z]$/.test(dni.value)) ) {
-        dni.focus();
+      //  dni.focus();
         return false;
     }
     else if(dni.value.charAt(8) != letras[(dni.value.substring(0, 8))%23]) {
-        dni.focus();
+      //  dni.focus();
         return false;
     }else return true;
 }
 function validarTelefono(numero){
     if( !(/^\d{9}$/.test(numero.value)) ) {
-        numero.focus();
+      //  numero.focus();
         return false;
     }
     else return true;
 }
 function validarCuenta(NumCuenta){
     if(!(/^\d{4}-\d{4}-\d{2}-\d{9}$/.test(NumCuenta.value))){
-        NumCuenta.focus();
+     //   NumCuenta.focus();
         return false;
     }
 
@@ -117,7 +117,7 @@ function validarCuenta(NumCuenta){
 }
 function validarUrl(url){
     if(!(/^(http|https|ftp)\:\/\/[a-z0-9\.-]+\.[a-z]{2,4}/gi.test(url.value))){
-        url.focus();
+        //url.focus();
         return false;
     }
 
@@ -142,9 +142,25 @@ function validarIdiomas(idioma) {
     return false;
 }
 function validarFormulario(){
-    if(validarNombre(nombre) && validarApellido(apellido1) && validarApellido(apellido2) && validarFecha(fecha)
-        && validarEmail(email)&& validarDNI(dni)&& validarTelefono(telefono) &&
-        validarCuenta(cuenta) && validarUrl(url)){
-        return true;
-    }else return false;
-}
+    var elementoConfoco;
+   if(!validarUrl(url))
+       elementoConfoco=url;
+    if(!validarCuenta(cuenta))
+        elementoConfoco=cuenta;
+    if(!validarTelefono(telefono))
+        elementoConfoco=telefono;
+    if(!validarDNI(dni))
+        elementoConfoco=dni;
+    if(!validarEmail(email))
+        elementoConfoco=email;
+    if(!validarFecha(fecha))
+        elementoConfoco=fecha;
+    if(!validarApellido(apellido2))
+        elementoConfoco=apellido2;
+    if(!validarApellido(apellido1))
+        elementoConfoco=apellido1;
+    if(!validarNombre(nombre))
+        elementoConfoco=nombre;
+    if(elementoConfoco!==undefined)
+        elementoConfoco.focus();
+        }
