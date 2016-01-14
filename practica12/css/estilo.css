@@ -2,7 +2,11 @@
     margin:0;
     padding:0;
 }
-
+header{
+    width: 100%;
+    background: red;
+    margin:0;
+}
 .fondo_index{
     background: url("../img/fondo_index.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -15,7 +19,7 @@
     width: 100%;
 }
 .transparent{
-    background: rgba(102,175,233,0.5);
+    background: #16587B;
     width: 100%;
 }
 #entrada{
@@ -86,6 +90,14 @@ ul li a:hover{
     -webkit-transform: scale(1);
     transform: scale(1);
 }
+#h1_index_page1{
+    margin:0;
+    font-family: 'Sofia', cursive;
+    text-align: center;
+}
+#h2_index_page1{
+
+}
 #h1_index{
     text-align: center;
     margin-top: 20px;
@@ -99,10 +111,10 @@ ul li a:hover{
     font-family: 'Sofia', cursive;
     color: white;
 }
-#logo{
+.logo{
     font-family: 'Poiret One', cursive;
     color:white;
-    margin:10px;
+    margin: 10px;
     font-size: 2em;
 }
 footer{
