@@ -15,7 +15,7 @@
 <nav class="transparent">
     <ul class="ul_index">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="#">Galería</a></li>
+        <li><a href="page1.html">Galería</a></li>
         <li><a href="reservas.html">Reservas</a></li>
         <li><a href="#">Contacto</a></li>
     </ul>
@@ -27,37 +27,41 @@
             <div id="datos_personales">
                 <div id="nombre">
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre">
+                    <input type="text" name="nombre" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
                 </div>
                 <div id="apellido1">
                     <label for="apellido1">Primer apellido</label>
-                    <input type="text" name="apellido1">
+                    <input type="text" name="apellido1" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
                 </div>
                 <div id="apellido2">
                     <label for="apellido2">Segundo apellido</label>
-                    <input type="text" name="apellido2">
+                    <input type="text" name="apellido2" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
                 </div>
                 <div id="correo">
                     <label for="correo">Email</label>
-                    <input type="text" name="correo">
+                    <input type="text" name="correo" placeholder="example@example.com" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
                 </div>
                 <div id="telefono">
                     <label for="telefono">Teléfono</label>
-                    <input type="text" name="telefono">
+                    <input type="text" name="telefono" required pattern="^[\d]+">
                 </div>
             </div>
             <div id="datos_reserva">
                 <div id="fecha_entrada">
                     <label for="fecha_entrada">Fecha de entrada</label>
-                    <input type="text" name="fecha_entrada">
+                    <input type="text" name="fecha_entrada" placeholder="dd/mm/aaaa" required pattern="^(0?[1-9]|[12][0-9]|3[01])[\/-](0?[1-9]|1[012])[/\-\/](19|20)\d{2}$">
                 </div>
                 <div id="fecha_salida">
                     <label for="fecha_salida">Fecha de salida</label>
-                    <input type="text" name="fecha_salida">
+                    <input type="text" name="fecha_salida" placeholder="dd/mm/aaaa" required pattern="^(0?[1-9]|[12][0-9]|3[01])[\/-](0?[1-9]|1[012])[/\-\/](19|20)\d{2}$">
                 </div>
                 <div id="num_personas">
                     <label for="num_personas">Número de personas</label>
-                    <input type="text" name="num_personas">
+                    <input type="text" name="num_personas" required pattern="^[1-9]$">
+                </div>
+                <div id="enviar">
+                    <label for="enviar"></label>
+                    <input id="submit" type="submit" name="enviar" value="Enviar">
                 </div>
             </div>
         </form>

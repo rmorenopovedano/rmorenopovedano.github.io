@@ -272,9 +272,22 @@ h3{
     color: white;
 }
 #seccion_reserva{
-    background: red;
-    width: 80%;
-    margin: 10px auto;
+    width: 50%;
+    margin: 10px auto 20px auto;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(30,114,158,1) 50%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(30,114,158,1) 50%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(30,114,158,1) 50%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(30,114,158,1) 50%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(30,114,158,1) 50%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+    padding: 40px;
+    -webkit-box-shadow: 0px 0px 34px -1px rgba(22,88,123,1);
+    -moz-box-shadow: 0px 0px 34px -1px rgba(22,88,123,1);
+    box-shadow: 0px 0px 34px -1px rgba(22,88,123,1);
+}
+form{
+    width: 100%;
     display: flex;
 }
 #datos_personales{
@@ -284,7 +297,39 @@ h3{
 #datos_reserva{
     width: 50%;
 }
-#nombre,#apellido1,#apellido2,#correo,#telefono,#fecha_entrada,#fecha_salida,#num_personas{
+#nombre,#apellido1,#apellido2,#correo,#telefono,#fecha_entrada,#fecha_salida,#num_personas,#enviar{
     margin-bottom: 5px;
-    margin-left: 50px;
+    text-align: center;
+    color: white;
+    font-family:"Mongolian Baiti";
+}
+label{
+    width: 100%;
+    display: block;
+}
+#submit{
+    padding: 10px 20px;
+    background: #66afe9;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: fantasy;
+    font-size: 1.2em;
+    color: white;
+    box-shadow: inset 1px -1px 11px 4px rgba(5,31,163,1);
+}
+input[required]{
+    border-color: red;
+    box-shadow: 1px 1px 5px grey;
+}
+input:invalid{
+    border-color:red;
+    box-shadow: 1px 1px 5px red;
+}
+input:required:valid {
+    border: 1px solid gray;
+    box-shadow: 1px 1px 5px gray;
+}
+input{
+    padding: 5px;
+    color: black;
 }
