@@ -96,9 +96,7 @@ header{
     text-align: center;
     color:#1E729E;
 }
-#h2_index_page1{
 
-}
 #h1_index{
     text-align: center;
     margin-top: 20px;
@@ -332,4 +330,28 @@ input:required:valid {
 input{
     padding: 5px;
     color: black;
+}
+@media (max-width: 1024px) {
+    #logo{
+        font-size: 1em;
+    }
+     #h1_index{
+         font-size: 2em;
+     }
+     #h2_index{
+         font-size: 1em;
+     }
+     #entrada{
+         margin-left: 0;
+         margin-right: 0;
+     }
+     #foto1,#foto2,#foto3{
+         margin:0;
+     }
+     #foto3{
+         display: none;
+     }
+}
+@media (max-width: 767px){
+
 }
