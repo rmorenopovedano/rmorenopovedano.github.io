@@ -358,8 +358,17 @@ input{
     .foto_principal{
         height: 260px;
     }
-    img{
-        height: 120px;
+    .linea{
+        width: 100%;
+        min-height: 115px;
+        display: flex;
+    }
+    .linea img{
+        height: 115px;
+        width: 45%;
+    }
+    .reserva{
+        font-size: 0.8em;
     }
 }
 @media (max-width: 767px){
