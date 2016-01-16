@@ -351,6 +351,36 @@ input{
      #foto3{
          display: none;
      }
+     #logo_page1{
+         text-align: center;
+     }
+     #h1_index_page1{
+         display: none;
+     }
+     .section_fotos{
+         width: 95%;
+         margin: 10px auto;
+         padding: 0;
+     }
+     .info_foto{
+         display: none;
+     }
+     .foto_principal{
+         width: 100%;
+         height: 200px;
+     }
+     .ul_seccion{
+         font-size: 1em;
+     }
+     .reserva{
+         font-size: 0.7em;
+     }
+     h3{
+         font-size: 0.9em;
+     }
+     #lista_footer{
+         font-size: 0.9em;
+     }
 }
 @media (max-width: 767px){
 
