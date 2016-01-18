@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookies Raúl Moreno Povedano</title>
+</head>
+<body>
+<h1>Cookies</h1>
+<p>Con document.cookie se obtienen y definen las cookies asociadas con el documento.</p>
+<p><b>PROS:</b>tienen duración limitada, por lo que los datos están un poco más seguros</p>
+<p><b>CONTRAS:</b> para recuperar el contenido de document.cookie hay que trabajar con las cadenas que se van almacenando en él, por lo que su accesibilidad se hace un poco compleja</p>
+<p>Métodos:</p>
+<ul>
+    <li>setCookie(): guarda el valor de las cookies</li>
+    <li>getCookie(): recupera el valor de la cookie según la clave almacenada</li>
+    <li>checkCookie(): comprueba si existe o no una cookie creada. En caso de no existir, la crea y guarda su valor</li>
+    <li>eliminarCookie(): elimina una cookie según su clave</li>
+</ul>
+    <form>
+        <label for="user">Nombre:</label>
+        <input type="text" id="user" name="user">
+        <br>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="pass">
+        <br>
+        <input type="checkbox" id="guardar" value="Guardar">Guardar cookie
+        <br>
+        <input type="button" id="enviar" value="Enviar">
+        <input type="button" id="eliminar" value="Eliminar">
+    </form>
+    <script type="text/javascript" src="almacenamiento.js"></script>
+</body>
+</html>

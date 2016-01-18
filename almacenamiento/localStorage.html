@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage Raúl Moreno Povedano</title>
+</head>
+<body>
+    <h1>LocalStorage</h1>
+    <p>
+        La propiedad localStorage te permite acceder al objeto local Storage. localStorage es similar a sessionStorage. La única diferencia es que, mientras los datos almacenados en localStorage no tienen fecha de expiración, los datos almacenados en sessionStorage son eliminados cuando se cierra el navegador.
+    </p>
+    <ul>
+        <ul><b>PROS:</b>
+            <li>es de fácil acceso ya que está definido como window.localStorage.</li>
+            <li>al ser un almacenamiento de tipo local, los datos no se envían al servidor, haciendo así más rápida la carga de la página.</li>
+        </ul>
+        <ul><b>CONTRAS:</b>
+            <li>los datos no se envían al servidor y además pueden ser modificados desde el propio navegador web, lo cual sería un importante agujero de seguridad.</li>
+        </ul>
+    </ul>
+    <p>Métodos:</p>
+    <ul>
+        <li>setItem(): guarda el valor de la cookie</li>
+        <li>getItem(): obtiene el valor de la cookie almacenada</li>
+        <li>removeItem(): elimina la cookie según la clave</li>
+    </ul>
+    <form>
+        <label for="user">Nombre:</label>
+        <input type="text" id="user" name="user">
+        <br>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="pass">
+        <br>
+        <input type="checkbox" id="guardar" value="Guardar">Guardar cookie
+        <br>
+        <input type="button" id="enviar" value="Enviar">
+        <input type="button" id="eliminar" value="Eliminar">
+    </form>
+    <script type="text/javascript" src="almacenamiento2.js"></script>
+</body>
+</html>
