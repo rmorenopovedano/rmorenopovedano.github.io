@@ -40,22 +40,26 @@ function checkCookie(info) {
             if(user==usuario.value && pass==password.value){
                 abrirVentana(user);
             }else{
-                document.getElementById('info').innerHTML="<p style='color:red; text-align: centers'>Datos incorrectos</p>";
+                document.getElementById('formulario').style.background="red";
+                document.getElementById('info').innerHTML="<p style='color:white; text-align: center'>Datos incorrectos</p>";
             }
 
         });
 
     } else {
-        var guardar=document.getElementById('guardar');
-        if(guardar.checked){
-            user=document.getElementById('user').value.trim();
-            pass=document.getElementById('pass').value.trim();
-            if (user != "" && user != null  && pass!= "" && pass!=null) {
-                setCookie("username", user, 30);
-                setCookie('password', pass, 30);
+        document.getElementById('enviar').addEventListener('click', function () {
+            var guardar = document.getElementById('guardar');
+            if (guardar.checked) {
+                user = document.getElementById('user').value.trim();
+                pass = document.getElementById('pass').value.trim();
+                if (user != "" && user != null && pass != "" && pass != null) {
+                    setCookie("username", user, 30);
+                    setCookie('password', pass, 30);
+                    document.getElementById('info').innerHTML="Cookies guardadas";
+                    document.getElementById('formulario').style.background="green";
+                }
             }
-        }
-
+        })
     }
 }
 function eliminarCookie(){

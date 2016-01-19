@@ -17,7 +17,7 @@
     <li>checkCookie(): comprueba si existe o no una cookie creada. En caso de no existir, la crea y guarda su valor</li>
     <li>eliminarCookie(): elimina una cookie según su clave</li>
 </ul>
-    <form>
+    <form id="formulario">
         <label for="user">Nombre:</label>
         <input type="text" id="user" name="user">
         <br>
@@ -28,8 +28,8 @@
         <br>
         <input type="button" id="enviar" value="Enviar">
         <input type="button" id="eliminar" value="Eliminar">
+        <span style="text-align: center; display: block; color: white; text-shadow: 1px 1px 1px black" id="info"></span>
     </form>
-    <span id="info"></span>
     <script type="text/javascript" src="almacenamiento.js"></script>
 </body>
 </html>

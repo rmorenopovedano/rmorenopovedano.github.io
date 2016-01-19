@@ -23,7 +23,8 @@ function checkCookie(info) {
             if(user==usuario.value && pass==password.value){
                 abrirVentana(user);
             }else{
-                document.getElementById('info').innerHTML="<p style='color:red; text-align: center'>Datos incorrectos</p>";
+                document.getElementById('formulario').style.background="red";
+                document.getElementById('info').innerHTML="<p style='color:white; text-align: center'>Datos incorrectos</p>";
             }
 
         });
@@ -37,6 +38,8 @@ function checkCookie(info) {
                 if (user != "" && user != null  && pass!= "" && pass!=null) {
                     setCookie("usuario_storage", user);
                     setCookie('password_storage', pass);
+                    document.getElementById('info').innerHTML="Cookies guardadas";
+                    document.getElementById('formulario').style.background="green";
                 }
             }
 
