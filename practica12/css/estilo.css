@@ -207,17 +207,37 @@ header{
     left: 2%;
 
 }
-.linea{
+.linea, .linea2 {
     width: 100%;
     min-height: 150px;
     display: flex;
+    /*text-align: center;*/
+    flex-direction: row;
 }
 
 .linea img {
-    width: 50%;
+    width: 47%;
     height: 150px;
-    margin: 8px;
+    margin: 5px 0px 5px 5px ;
 }
+
+.linea img:not:last-child{
+    margin-right: 5px;
+}
+
+picture{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin:0;
+}
+
+picture img{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .reserva{
     position: absolute;
     right: 5px;
@@ -442,10 +462,5 @@ input{
     form{
         display:block;
     }
-    .linea:last-child {
-        display: none;
-    }
-    .linea:first-child{
-        width: 100%;
-    }
+
 }
