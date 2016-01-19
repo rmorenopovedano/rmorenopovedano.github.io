@@ -30,8 +30,21 @@ function getCookie(cname) {
 
 function checkCookie(info) {
     var user=getCookie("username");
-    if (user != "") {
-        abrirVentana(user);
+    var pass=getCookie('password');
+    var usuario=document.getElementById('user');
+    var password=document.getElementById('pass');
+    if (user != "" && pass!="" && user!=null && pass!=null) {
+        usuario.value=user;
+        password.value=pass;
+        document.getElementById('enviar').addEventListener('click',function(){
+            if(user==usuario.value && pass==password.value){
+                abrirVentana(user);
+            }else{
+                document.getElementById('info').innerHTML="<p style='color:red; text-align: centers'>Datos incorrectos</p>";
+            }
+
+        });
+
     } else {
         var guardar=document.getElementById('guardar');
         if(guardar.checked){
@@ -39,6 +52,7 @@ function checkCookie(info) {
             pass=document.getElementById('pass').value.trim();
             if (user != "" && user != null  && pass!= "" && pass!=null) {
                 setCookie("username", user, 30);
+                setCookie('password', pass, 30);
             }
         }
 
@@ -51,8 +65,9 @@ function abrirVentana(user){
     var nuevaVentana=window.open();
     nuevaVentana.document.writeln("<html>" +
         "<head>" +
+        "<link rel='stylesheet' type='text/css' href='estilo.css'>"+
         "</head>"+
-            "<body>" +
+        "<body>" +
         "<h1>Bienvenido "+user+"</h1>" +
         "</body>"+
         "</html>")
@@ -60,10 +75,7 @@ function abrirVentana(user){
 window.addEventListener("load",function(){
     var info=document.getElementById('mensaje');
     checkCookie(info);
-    document.getElementById('enviar').addEventListener('click',function(){
-        checkCookie(info);
-    })
     document.getElementById('eliminar').addEventListener('click',function(){
         eliminarCookie();
-    })
-})
+    });
+});
