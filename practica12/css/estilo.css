@@ -36,7 +36,7 @@ header{
 }
 .ul_index li a{
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 20px 20px;
     color: #66afe9;
 }
 .ul_index li a:hover{
@@ -212,6 +212,7 @@ header{
     min-height: 150px;
     display: flex;
 }
+
 .linea img {
     width: 50%;
     height: 150px;
@@ -248,9 +249,11 @@ footer{
 #lista_footer{
     list-style: none;
     padding: 10px;
+    text-align: center;
 }
 #lista_footer_redes{
     list-style: none;
+    text-align: center;
     padding: 10px;
 }
 #lista_footer_redes li{
@@ -335,7 +338,7 @@ input{
     padding: 5px;
     color: black;
 }
-@media (max-width: 1024px) {
+@media (max-width: 500px) {
     #seccion_reserva{
         width: 85%;
     }
@@ -367,11 +370,14 @@ input{
         height: 115px;
         width: 45%;
     }
+    .info_foto{
+        display: none;
+    }
     .reserva{
         font-size: 0.8em;
     }
 }
-@media (max-width: 767px){
+@media (max-width: 900px){
     #logo{
         font-size: 1em;
         margin: 12px;
@@ -401,9 +407,6 @@ input{
         width: 95%;
         margin: 10px auto;
         padding: 0;
-    }
-    .info_foto{
-        display: none;
     }
     .foto_principal{
         width: 100%;
@@ -438,5 +441,11 @@ input{
     }
     form{
         display:block;
+    }
+    .linea:last-child {
+        display: none;
+    }
+    .linea:first-child{
+        width: 100%;
     }
 }
