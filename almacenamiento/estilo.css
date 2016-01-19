@@ -14,3 +14,24 @@ h1{
 form input{
     margin: 4px;
 }
+#menu{
+    list-style: none;
+    text-align: center;
+}
+#principal{
+    width: 90%;
+    margin: 0 auto;
+}
+#menu li{
+    padding: 10px;
+    display: inline-block;
+    padding: 5px;
+}
+#menu li a{
+    text-decoration: none;
+    background: #5bc0de;
+    padding: 5px;
+}
+#menu li a:hover{
+    background: white;
+}

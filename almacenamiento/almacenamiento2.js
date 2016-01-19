@@ -57,7 +57,7 @@ function abrirVentana(user){
     nuevaVentana.document.close();
 }
 function eliminarCookie(){
-    localStorage.removeItem("username");
+    localStorage.removeItem("usuario_storage");
 }
 
 window.addEventListener("load",function(){
