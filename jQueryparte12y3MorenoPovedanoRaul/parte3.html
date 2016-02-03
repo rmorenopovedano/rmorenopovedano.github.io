@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery parte 3</title>
+    <script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="parte3.js"></script>
+    <style type="text/css">
+        .rojo{
+            color: #cc0000;
+        }
+        .verde{
+            color: #00cc00;
+        }
+        .azul{
+            color: #0000cc;
+        }
+        .fondogris{
+            background-color: #cccccc;
+        }
+        body{
+            font-family: verdana, arial, helvetica;
+        }
+        div{
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+<h1 style="font-size: 3em; text-align: center;">Parte 3 de jQuery</h1>
+<h1>Demo 1</h1>
+<h1>Selectores en jQuery</h1>
+<p>En esta página hay varias etiquetas. Ahora con este formulario puedes escribir un selector, para
+    seleccionar algunas con jQuery, y luego pulsar el botón para ver qué elementos de la página has
+    seleccionado.</p>
+<form>
+    Selector: <input type="Text" name="camposelector" id="camposelector">
+    <input type="button" id="boton" value="Ver qué elementos seleccionas">
+</form>
+<p id="p1" class="rojo">Este es un párrafo con id="p1" y class="rojo"</p>
+<p id="p2" class="verde">Este es un párrafo con id="p2" y class="verde" y aquí <i>meto una
+    itálica</i></p>
+<p id="p3" class="rojo fondogris">Este es un párrafo con id="p3" y class="rojo fondogris" (es decir,
+    este elemento tiene aplicadas las clases "rojo" y "fondogris"</p>
+<p id="p4">Este es un párrafo con id="p4", sin class</p>
+<p>Este es un párrafo sin id ni class</p>
+<div id="div1">Esto es una división con id="div1"</div>
+<div id="div2" class="rojo">Esto es una división con id="div2" y class="rojo" y aqui <b>meto una
+    negrita</b></div>
+<div id="div3" class="verde fondogris">Esto es una división con id="div3" y class="verde
+    fondogris"</div>
+<div>Esto es una división sin id ni class</div>
+<div class="azul">Esto es una división sin id, con class="azul"</div>
+<b>Esto es una etiqueta b</b>
+<i>Esto es una etiqueta i</i>
+<h2>Demo 2: selectores de jerarquía</h2>
+<p class="parraforojo">
+    <i>Hola</i> <b>esto</b> es un <b>párrafo</b> rojo <i>donde</i> he <b>puesto</b> unas <b>negritas</b>
+</p>
+<p class="parraforojo">Otro <b>con</b> clase class="parraforojo" <span class="unspan"><b>(esto está
+    dentro de unspan B, no depende directamente -no child- del párrafo)</b></span></p>
+<p>Hola <b>esto</b> es otro <b>párrafo </b>para <i>poner</i> otras <b>negritas</b></p>
+<p>hola!!!</p>
+<table border=1>
+    <tr>
+        <td><i>Tabla cualquiera</i></td>
+        <td>Esta tabla <b>no tiene</b> class de <b>CSS</b></td>
+    </tr>
+</table>
+<p id="miparrafo">Este es el párrafo con id="miparrafo"</p>
+<table class="mitabla" border=1>
+    <tr>
+        <td colspan=2>Esta tabla tiene una <b>clase CSS</b></td>
+    </tr>
+    <tr>
+        <td><i>class="mitabla"</i></td>
+        <td class="mitd">Y este <b>td</b> le he puesto <i>class="mitd"</i> <span>Una cosa<span>otra
+cosa</span></span></td>
+    </tr>
+</table>
+<p><b>Párrafo</b> que tiene alguna <b>negrita</b> e <span class="algo"><i>itálica</i></span> para
+    seleccionar</p>
+<div>
+    <div id="a1">hola</div> <div id="a2">dos</div> <div id="a3">3</div> <span>Cuatro (no es un div)???
+</span> <div id="a4" class="clase">Cuatro de verdad</div>
+</div>
+<ul>
+    <li>Elem 1</li>
+    <li class="elemlista">Elem 2</li>
+    <li>Elem 3</li>
+    <li>Elem 4</li>
+    <li class="elemlista">Elem 5</li>
+    <li class="elemlista">Elem 6</li>
+    <li>Elem 7</li>
+</ul>
+
+</body>
+</html>

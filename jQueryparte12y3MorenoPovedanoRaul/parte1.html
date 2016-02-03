@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parte 1 jQuery</title>
+    <script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="parte1.js"></script>
+    <style type="text/css">
+        .clasecss{
+            background-color: #ff8800;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+<h1 style="font-size: 3em; text-align: center;">Parte 1 de jQuery</h1>
+<h1>Demo 1</h1>
+<div id="capa" style="padding: 10px; background-color: #ff8800">Haz clic en un botón</div>
+<input type="button" id="btna" value="Botón A">
+<input type="button" id="btnb" value="Botón B">
+<h1>Demo 2</h1>
+<div id="capa2" style="padding: 10px; background-color: #ff8800;">Pon el ratón encima de esta
+    capa</div>
+<br>
+<div id="mensaje" style="display: none;">Has puesto el ratón encima!! <br>(Ahora quítalo de la
+    capa)</div>
+<h1>Demo 3</h1>
+<a id="a1" href="http://www.desarrolloweb.com/">DesarrolloWeb.com</a>
+<span id="alerta"></span>
+<h1>Demo 4</h1>
+<a id="a2" href="http://www.desarrolloweb.com/">DesarrolloWeb.com</a>
+<span id="alerta2"></span>
+<h1>Demo 5</h1>
+<div id="capa3">
+    Esta capa es independiente y voy a añadir y eliminar clases css sobre ella
+</div>
+<br>
+<br>
+<a id="a3" href="http://www.desarrolloweb.com">Añadir y quitar clase en la capa de arriba</a>
+<h1>Demo 6</h1>
+<form>
+    Nombre: <input type="text" name="nombre">
+    <br>
+    <input type="checkbox" name="mayor_edad" value="1" id="mayoria_edad"> Soy mayor de edad
+    <br>
+    <div id="formulariomayores" style="display: none;">
+        Dato para mayores de edad: <input type="text" name="mayores_edad">
+    </div>
+</form>
+<h1>Demo 7: efectos con jQuery</h1>
+<div id="capaefectos" style="background-color: #cc7700; color:fff; padding:10px;">
+    Esto es una capa que nos servirá para hacer efectos!
+</div>
+<p>
+    <a href="#" id="ocultar">Ocultar la capa</a> |
+    <a href="#" id="mostrar">Mostrar la capa</a>
+</p>
+<h1>Demo 8: Callback</h1>
+<div id="micapa" style="background-color: #cc7700;">
+    Esto es una capa que nos servirá para hacer efectos!
+</div>
+<a href="#" id="realizar">Realizar efecto</a>
+<h1>Demo 9: Ajax</h1>
+<a href="#" id="enlaceajax">Haz clic!</a>
+<div id="destino"></div>
+<h1>Demo 10: Ajax</h1>
+<a href="#" id="enlaceajax2">Haz clic!</a>
+<div id="destino2"></div>
+<h1>Demo 11: Ajax</h1>
+<a href="#" id="enlaceajax3">Haz clic!</a>
+<div id="cargando" style="display:none; color: green;"><img src="ajax-loader.gif"></div>
+<br>
+<div id="destino3"></div>
+</body>
+</html>
