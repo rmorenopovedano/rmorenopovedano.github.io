@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raul Moreno Povedano</title>
+</head>
+<body>
+<pre>
+   1. Distintas formas de acceder al atributo checked. Compruébalo en las distintas plataformas, tanto con input como con radio buttons
+1.:selected Selector
+2.prop()
+3.attr()
+4.:checked Selector
+5.val()
+</pre>
+<h1>:SELECTED SELECTOR</h1>
+<select>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+</select>
+<div></div>
+<h1>prop() y attr()</h1>
+<input id="check1" type="checkbox" checked="checked">
+<label for="check1">Check me</label>
+<p></p>
+<h1>:CHECKED SELECTOR</h1>
+<form id="form">
+    <input type="checkbox" name="newsletter" value="Hourly" checked="checked">
+
+    <input type="checkbox" name="newsletter" value="Daily">
+    <input type="checkbox" name="newsletter" value="Weekly">
+
+    <input type="checkbox" name="newsletter" value="Monthly" checked>
+    <input type="checkbox" name="newsletter" value="Yearly">
+</form>
+<div id="div"></div>
+<h1>val()</h1>
+<p id="p"></p>
+
+<select id="single">
+    <option>Single</option>
+    <option>Single2</option>
+</select>
+
+<select id="multiple" multiple="multiple">
+    <option selected="selected">Multiple</option>
+    <option>Multiple2</option>
+    <option selected="selected">Multiple3</option>
+</select>
+<script type="text/javascript" src="../jQueryparte12y3MorenoPovedanoRaul/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="../jQueryparte12y3MorenoPovedanoRaul/index.js"></script>
+</body>
+</html>
