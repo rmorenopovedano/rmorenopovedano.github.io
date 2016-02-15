@@ -94,8 +94,7 @@ $(document).ready(function() {
         var funcionesEnColaPredeterminada = $("#micapa").queue().length;
 //console.log("Cola 'micola':", $("#micapa").queue("micola"));
         var textoMostrar = "Hay " + funcionesEnCola + " funciones de efectos en la cola 'micola'";
-        textoMostrar += "<br>Hay " + funcionesEnColaPredeterminada + " funciones de efectos en la cola
-        por defecto";
+        textoMostrar += "<br>Hay " + funcionesEnColaPredeterminada + " funciones de efectos en la cola por defecto";
         $("#mensaje").html(textoMostrar);
     }
     function cambiarColores(){
@@ -141,4 +140,4 @@ $(document).ready(function() {
             muestraRestantesCola();
         });
     });
-}
+});
