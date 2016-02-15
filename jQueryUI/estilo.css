@@ -1,0 +1,25 @@
+#contenedor{
+    width: 90%;
+}
+ul li a{
+   text-decoration: none;
+    padding: 5px;
+
+}
+ul li{
+    text-align: center;
+    background: #79c9ec;
+    width: 20%;
+    margin: 5px auto;
+    padding: 4px;
+}
+ul{
+    list-style: none;
+}
+h1{
+    text-align: center;
+}
+ul li:hover{
+    background: white;
+    border: 1px solid black;
+}
