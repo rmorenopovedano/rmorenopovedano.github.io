@@ -56,8 +56,8 @@ $(document).ready(function(){
     $("#quitarevento").bind("click", function(){
         $(".miclase").unbind("click", clicAlerta);
     })
-    $(".verde").live("click", function(e){
-        var elem = $(this);
+    $(document.body).on("click",".verde" ,function(e){
+        var elem = $(e.target());
         if (elem.html()!="Hiciste clic!!"){
             elem.html("Hiciste clic!!");
         }else{
