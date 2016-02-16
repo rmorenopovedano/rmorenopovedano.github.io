@@ -3,42 +3,67 @@
 <head>
 	<meta charset="utf-8">
 	<title>jQuery UI Accordion - Customize icons</title>
-	<link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
 	<script type="text/javascript" src="jquery-2.2.0.min.js"></script>
-	<script type="text/javascript" src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
-		<script>
-		$(function() {
-			var icons = {
-				header: "ui-icon-circle-arrow-e",
-				activeHeader: "ui-icon-circle-arrow-s"
-			};
-			$( "#accordion" ).accordion({
-				icons: icons
-			});
-			$( "#toggle" ).button().click(function() {
-				if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
-					$( "#accordion" ).accordion( "option", "icons", null );
-				} else {
-					$( "#accordion" ).accordion( "option", "icons", icons );
-				}
-			});
-		});
-	</script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="jQUI.js"></script>
+	<style>
+		.ui-progressbar {
+			position: relative;
+		}
+		.progress-label {
+			position: absolute;
+			left: 50%;
+			top: 4px;
+			font-weight: bold;
+			text-shadow: 1px 1px 0 #fff;
+		}
+		label {
+			display: inline-block; width: 5em;
+		}
+		fieldset div {
+			margin-bottom: 2em;
+		}
+		fieldset .help {
+			display: inline-block;
+		}
+		.ui-tooltip {
+			width: 210px;
+		}
+	</style>
 </head>
 <body>
 
 <div id="accordion">
 	<h3>Dialog</h3>
 	<div>
-		<p><a href="Dialog/dialog.html">Ejemplo de Dialog</a></p>
+		<button id="abrir">Abrir dialógo</button>
+		<div id="dialog" title="Raúl Moreno Povedano">
+			Alumno en 2ºDAW en el IES Gran Capitán
+		</div>
 	</div>
 	<h3>ProgressBar</h3>
 	<div>
-		<p><a href="ProgressBar/ProgressBar.html">Ejemplo de ProgressBar</a></p>
+		<div id="progressbar"><div class="progress-label">Loading...</div></div>
 	</div>
 	<h3>Tooltip</h3>
 	<div>
-		<p><a href="Tooltip/tooltip.html">Ejemplo de Tooltip</a></p>
+		<form>
+			<fieldset>
+				<div>
+					<label for="firstname">Firstname</label>
+					<input id="firstname" name="firstname" title="Please provide your firstname.">
+				</div>
+				<div>
+					<label for="lastname">Lastname</label>
+					<input id="lastname" name="lastname" title="Please provide also your lastname.">
+				</div>
+				<div>
+					<label for="address">Address</label>
+					<input id="address" name="address" title="Your home or work address.">
+				</div>
+			</fieldset>
+		</form>
 	</div>
 </div>
 
