@@ -2,5 +2,10 @@
  * Created by Raul on 15/02/2016.
  */
 $(function() {
-      $( "#dialog" ).dialog();
+      $("#abrir").on("click", function(){
+            $("#dialog").dialog("open");
+      })
+      $( "#dialog" ).dialog({
+            autoOpen:false
+      });
 });
