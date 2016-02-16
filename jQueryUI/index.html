@@ -1,18 +1,49 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>jQueryUI Raul Moreno Povedano</title>
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<meta charset="utf-8">
+	<title>jQuery UI Accordion - Customize icons</title>
+	<link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.css">
+	<script type="text/javascript" src="jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+		<script>
+		$(function() {
+			var icons = {
+				header: "ui-icon-circle-arrow-e",
+				activeHeader: "ui-icon-circle-arrow-s"
+			};
+			$( "#accordion" ).accordion({
+				icons: icons
+			});
+			$( "#toggle" ).button().click(function() {
+				if ( $( "#accordion" ).accordion( "option", "icons" ) ) {
+					$( "#accordion" ).accordion( "option", "icons", null );
+				} else {
+					$( "#accordion" ).accordion( "option", "icons", icons );
+				}
+			});
+		});
+	</script>
 </head>
 <body>
-<h1>jQuery UI Raúl Moreno Povedano</h1>
-<div id="contenedor">
-	<ul>
-		<li><a href="Dialog/dialog.html">Dialog</a></li>
-		<li><a href="ProgressBar/ProgressBar.html">ProgressBar</a></li>
-		<li><a href="Tooltip/tooltip.html">Tooltip</a></li>
-	</ul>
+
+<div id="accordion">
+	<h3>Dialog</h3>
+	<div>
+		<p><a href="Dialog/dialog.html">Ejemplo de Dialog</a></p>
+	</div>
+	<h3>ProgressBar</h3>
+	<div>
+		<p><a href="ProgressBar/ProgressBar.html">Ejemplo de ProgressBar</a></p>
+	</div>
+	<h3>Tooltip</h3>
+	<div>
+		<p><a href="Tooltip/tooltip.html">Ejemplo de Tooltip</a></p>
+	</div>
 </div>
+
+<button id="toggle">Toggle icons</button>
+
+
 </body>
 </html>
