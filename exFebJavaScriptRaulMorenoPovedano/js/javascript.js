@@ -31,11 +31,10 @@
                 var usuario=new Usuario(nombre.value, apellidos.value, dni.value, sexo.value);
                 usuario.mostrar(info);
                 usuario.crearListItem(lista);
-                alert();
-                    document.cookie="nombre="+nombre.value+";";
-                    document.cookie="apellidos="+apellidos.value+";";
-                    document.cookie="dni="+dni.value+";";
-                    document.cookie="sexo="+sexo.value+";";
+                document.cookie="nombre="+nombre.value+";";
+                document.cookie="apellidos="+apellidos.value+";";
+                document.cookie="dni="+dni.value+";";
+                document.cookie="sexo="+sexo.value+";";
             }
         });
         document.getElementById('limpiar').addEventListener('click', function(){
