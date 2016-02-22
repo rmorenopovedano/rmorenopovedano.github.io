@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raúl Moreno Povedano</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label for="nombre">Nombre:</label>
+                </td>
+                <td>
+                    <input type="text" id="nombre"> <span id="errorNombre" style="color:red; display: none"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="apellidos">Apellidos:</label>
+                </td>
+                <td>
+                    <input type="text" id="apellidos"> <span id="errorApellidos" style="color:red; display: none"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dni">DNI:</label>
+                </td>
+                <td>
+                    <input type="text" id="dni"> <span id="errorDni" style="color:red; display: none"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="sexo">Sexo:</label>
+                </td>
+                <td>
+                    <select id="sexo">
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                <input type="checkbox" id="aceptar">Acepto las condiciones <span id="errorAceptar" style="color:red; display: none"></span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" id="enviar" value="Nuevo usuario">
+                <input type="button" id="limpiar" value="Limpiar"></td>
+            </tr>
+        </table>
+    </form>
+    <div id="info"></div>
+    <ul id="lista"></ul>
+    <script type="text/javascript" src="js/validar.js"></script>
+    <script type="text/javascript" src="js/Usuario.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+</body>
+</html>
