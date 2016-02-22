@@ -45,6 +45,10 @@
             apellidos.value="";
             dni.value="";
             aceptar.checked=false;
+            errorNombre.innerHTML="";
+            errorApellidos.innerHTML="";
+            errorDni.innerHTML="";
+            errorAceptar.innerHTML="";
             document.cookie = "nombre=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
             document.cookie = "apellidos" + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
             document.cookie = "dni" + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
