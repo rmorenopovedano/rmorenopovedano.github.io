@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raúl Moreno Povedano: Documentación Casas Rurales</title>
+    <link href="css/estiloDocumentacion.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/documentacion.js"></script>
+</head>
+<body>
+    <div id="contenedor">
+        <header>
+            <h1>Documentación Casas Rurales: TUCARAL</h1>
+        </header>
+        <div id="flex">
+        <nav>
+            <ul>
+                <a id="js" href="#javascript"><li>Javascript Activo</li></a>
+                <a id="coo" href="#cookiesActivas"><li>Cookies activas</li></a>
+                <a id="ef" href="#efectos_inicio"><li>Efecto inicio</li></a>
+                <a id="nm" href="#nombre_efecto"><li>Nombre con efecto</li></a>
+                <a id="li" href="#lightbox"><li>Lightbox</li></a>
+                <a id="va" href="#validacion"><li>Validación</li></a>
+                <a id="fe" href="#fechas"><li>Fechas</li></a>
+                <a id="pl" href="#plugin"><li>Plugin cookies</li></a>
+                <a id="jq" href="#jquery"><li>jQuery UI</li></a>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                    <h2 id="mensaje">PULSA EN EL MENÚ</h2>
+                <article id="javascript">
+                    <h2>Javascript activo</h2>
+                    <p>
+                        Par comprobar si javascript está activado o no, debemos colocar la etiqueta noscript al principio
+                        del html. Si el navegador detecta que javascript no está activado, entra en la etiqueta y muestra
+                        el contenido que hay en su interior. En este caso, un aviso de que javascript no está activado y
+                        enlace a una página de referencia de cómo activarlo.
+                    </p>
+                    <img src="../img/noscript.JPG">
+                </article>
+            </section>
+            <section>
+                <article id="cookiesActivas">
+                    <h2>Cookies activas</h2>
+                    <p>
+                        Para comprobar si las cookies están activadas o no hay que hacer uso del objeto <b>navigator</b>
+                        y a su propiedad <b>cookieEnabled</b>. Esto devolverá un valor booleano: verdadero en el caso de
+                        que las cookies estén activas, o falso en el caso de que no lo estén. Si no están activas se
+                        mostrará un mensaje de aviso para activarlas.
+                    </p>
+                    <img src="../img/cookiesActivas.JPG">
+                    <p>
+                        Diálogo que aparecerá:
+                    </p>
+                    <img src="../img/mensajeCookiesActivas.JPG">
+                </article>
+            </section>
+            <section>
+                <article id="efectos_inicio">
+                    <h2>Efectos de inicio</h2>
+                    <p>En el inicio he hecho 2 efectos, uno sobre la imagen de background de fondo y otro sobre las fotos
+                    que aparecen debajo. El efecto del background consiste en mover la posición del fondo dependiendo de
+                        la posición del ratón <b>(mousemove)</b>. Conforme el ratón va moviéndose por el fondo, su posición
+                        va cambiando. El código es el siguiente:
+                    </p>
+                    <img src="../img/efecto_inicio.JPG">
+                    <p>
+                        Los efectos sobre las fotos consisten en hacerlas aparecer lentamente. Para ello, primeramente han
+                        de estar escondidas en el html para hacerlas aparecer con jquery con el método fadeIn().
+                        Código:
+                    </p>
+                    <img src="../img/efectos_fotos.JPG">
+                    <p>
+                        El número que pasamos como parámetro al método fadeIn() indica el tiempo que tarda en hacerse visible
+                        completamente.
+                    </p>
+                </article>
+            </section>
+            <section>
+                <article id="nombre_efecto">
+                    <h2>Nombre con efecto</h2>
+                    <p>
+                        Para los títulos de las casas rurales hemos realizado un sencillo efecto que consiste en 2 pasos:
+                        Al entrar el ratón en la sección de cada casa, y al salir. Al entrar en cada sección, se produce
+                        2 animaciones al mismo tiempo. Estas animaciones ocurren lentamente y consisten en cambiar el color
+                        del texto a un tono naranja con una opacidad 0.6 y un aumento de letra, hacia una opacidad de 1.
+                        Al salir de la sección de cada casa, el título vuelve a su estado inicial, disminuyendo la letra
+                        y volviendo a ser de color blanco.
+                        Código:
+                    </p>
+                    <img src="../img/efecto_casas.JPG">
+                </article>
+            </section>
+            <section>
+                <article id="lightbox">
+                    <h2>Lightbox</h2>
+                    <p>
+                        Para el uso del lightbox hemos tenido que descargar la librería de lightbox. Para ello, mediante
+                        el uso de bower <b>(bower install lighbox2)</b>. <a href="http://lokeshdhakar.com/projects/lightbox2/">Página de referencia</a>.
+                        Con los archivos descargados hay que linkear el css de lightbox en el head y la carpeta images que
+                        viene en el paquete situarlo en la ruta correspondiente para hacer uso de las imágenes de estilo que
+                        usa lightbox en su diseño. En nuestro caso queremos usar el lightbox para un grupo de imágenes, por lo
+                        tanto, tendremos que usar un atributo común para todas las imágenes que pertenezcan a ese lightbox.
+                        Código:
+                    </p>
+                    <img src="../img/lightbox.JPG">
+                    <p>
+                        El atributo <b>data-lightbox</b> sirve para agrupar a todas las imágenes pertenecientes al mismo
+                        lightbox. El atributo <b>data-title</b> sirve para que aparezca en la imagen una descripción. El
+                        lightbox se puede configurar para cambiar las opciones por defecto desde javascript.
+                    </p>
+                    <img src="../img/lightbox2.JPG">
+                    <ul>
+                        <li><b>resizeDuration</b>:</li> Tiempo en milisegundos que tarda en animar el ancho y el alto en la transición de las fotos.
+                        <li><b>wrapAround</b>:</li>True:la flecha para continuar visualizando fotos no desaparece en la última foto.
+                        <li><b>showImageNumberLabel</b>:</li>False:elimina del pie de foto el número de foto por el que está.
+                        <li><b>positionFromTop</b>:</li>120:sitúa el lightbox 120px del borde superior de la ventana.
+                        <li><b>disableScrolling</b>:</li>True:evita que se pueda hacer scroll en la página mientras el lightbox está activo.
+                    </ul>
+                </article>
+            </section>
+            <section>
+                <article id="validacion">
+                    <h2>Validación</h2>
+                    <p>
+                        Vamos a realizar la validación en 2 casos: cuando se pierde el foco <b>(elemento blur)</b> y cuando
+                        se enviar el formulario con el <b>elemento click</b>. Aquí se puede ver que ante cada evento llamamos
+                        a un método validar distinto, dependiendo de donde se sitúe el foco.
+                    </p>
+                    <img src="../img/eventos.JPG">
+                    <p>
+                        En el caso del nombre, los apellidos, el correo, el teléfono y el número de personas es el mismo.
+                    </p>
+                    <img src="../img/validarNombre.JPG">
+                    <p>
+                        En el caso de haber algún error, el método lanzará los errores correspondientes, o bien, "EL CAMPO
+                        NO PUEDE ESTAR VACÍO" O "FORMATO INCORRECTO" mostrando un span colocado en el html con el método show().
+                        Además añadirá un background y un color a los mensajes de error
+                        que los cargamos desde el css añadiendo la clase al elemento desde jQuery con el método addClas().
+                        En caso de que no haya ningún tipo de error, el método validar devolverá true y se esconderán los mensajes
+                        de error con el método hide(). Resultado:
+                    </p>
+                    <img src="../img/errores.JPG">
+                    <p>
+                        En el resto de métodos validar lo que cambia es el patrón de la expresión regular. En cuanto a las fechas
+                        y el checkbox la validación es un poco distinto. Las fechas serán validadas con el datepicker, por lo que
+                        solo tendremos que controlar que el campo no ha quedado vacío. Mientras que el checkbox, la validación
+                        que tiene es la de comprobar si el checkbox ha sido tildado o no. Hasta que no se tilda, no se puede validar
+                        y devolver true.
+                    </p>
+                    <img src="../img/aceptar.JPG">
+                    <p>
+                        La siguiente validación se situaba en el evento click para enviar el formulario. En el cual cuando se produzca
+                        el click invocaremos a una función que contenga todas las validaciones.
+                    </p>
+                    <img src="../img/validarFormulario.JPG">
+                    <p>
+                        Si validarFormuario ha devuelto un true, el formulario será enviado, si hay un error, el validación
+                        de cada método detectará en que input se ha cometido el error y lo señalará.
+                    </p>
+                </article>
+            </section>
+            <section>
+                <article id="fechas">
+                    <h2>Fechas</h2>
+                    <p>
+                        Para controlar las fechas he usado un widget de jQuery UI llamado Datepicker. Lo primero que hay que
+                        hay que hacer es descargarse el tema elegido que contendrá el paquete de archivos con el css y el js
+                        que hay que linkear en nuestra cabecera. Una vez linkeados el css y el js correspondiente solo hay que
+                        seguir el código que muestra en la documentación de jQuery UI y modificar algunos parámetros para
+                        configurarlo a tu gusto.
+                    </p>
+                    <img src="../img/datepickher.JPG">
+                    <p>
+                        Los parámetros de configuración son:
+                        <ul>
+                    <li>dateFormat: para situar el formato en dd/mm/yy</li>
+                    <li>minDate: para que el primer día que se pueda seleccionar sea hoy</li>
+                    <li>firsDay: se pone a 1 porque sino empieza en Domingo la semana</li>
+                    <li>prevText y nextText: situan el mensaje que aparece al poner el cursos sobre las flechas</li>
+                    <li>dayNamesMin: cambia el nombre de los días</li>
+                    <li>monthNames: cambia el nombre de los meses para ponerlos en castellano</li>
+                    <li>numberOfMonths: número de meses desplegables que aparecen al pulsar el input</li>
+                </ul>
+                        Con el método onClose() enviamos al datepicker de la fecha de salida el día seleccionado, para que
+                    al abrir el mes, no se pueda pulsar un día con fecha anterior al día seleccionado en la fecha de entrada.
+                    </p>
+                </article>
+            </section>
+            <section>
+                <article id="plugin">
+                    <h2>Plugin cookies</h2>
+                    <p>
+                        Para comprobar y almacenar las cookies he usado un plugin de esta <a href="https://github.com/js-cookie/js-cookie">página</a>.
+                        Para utilizar descargamos primero la librería y la guardamos como js-cookie-master en nuestro proyecto.
+                        A continuación linkeamos en el head el js y la usamos de la siguiente manera:
+                    </p>
+                    <img src="../img/cookies.JPG">
+                    <p>
+                        En la función crearCookies, creamos las cookies con el método Cookies.set("nombre","valor","expiración");
+                        Esta función la usaremos una vez ha sido validado el formulario y está listo para enviarse.
+                        Para que al volver a cargar las cookies estén situadas en los valores de los inputs, uso la
+                        función comprobarCookie(), la cual invoco al inicio de la página tras cargar los valores. En el método
+                        comprobarCookies() rescato los valores de las cookies con el método Cookies.get("nombre"). A continuación,
+                        compruebo si las cookies están vacías o no. En el caso de que no estén vacías obtengo su valor y las guardo
+                        en cada input.
+                    </p>
+                </article>
+            </section>
+            <section>
+                <article id="jquery">
+                    <h2>jQuery UI</h2>
+                    <p>
+                        Para el uso de jQuery hemos usado la última versión
+                    </p>
+                    <img src="../img/version.JPG">
+                    <p>
+                        Además hemos linkeado la versión minimificada para que tarde menos tiempo en cargar. Tanto el css como el js.
+
+                    </p>
+                    <img src="../img/versiones.JPG">
+                </article>
+            </section>
+        </main>
+            </div>
+        <footer>
+            <h3>Raúl Moreno Povedano</h3>
+        </footer>
+    </div>
+</body>
+</html>

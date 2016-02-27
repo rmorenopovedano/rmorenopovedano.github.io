@@ -5,17 +5,35 @@
 body{
     min-width: 320px;
 }
+noscript{
+    text-align: center;
+    background: lightyellow;
+    display: block;
+    padding: 4px;
+    border: 3px solid gray;
+}
 header{
     width: 100%;
     background: #1E729E;
     margin:0;
 }
+#cerrar{
+    text-decoration: none;
+    color: gray;
+}
+.ui-state-error{
+    box-sizing: border-box;
+    position: absolute;
+    display: none;
+    font-size: 1.4em;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    font-weight: bold;
+}
 .fondo_index{
-    background: url("../img/fondo_index.jpg") no-repeat center center fixed;
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
+    background: url("../img/fondo_index.jpg") no-repeat center center;
+    background-size: 110%;
 }
 .inicio{
     background: rgba(0,0,0,0.2);
@@ -113,6 +131,10 @@ header{
     font-family: 'Sofia', cursive;
     color: white;
 }
+input{
+    display: block;
+    margin: 0 auto;
+}
 #logo{
     font-family: 'Poiret One', cursive;
     color:white;
@@ -134,44 +156,14 @@ header{
     border-radius: 10px 10px;
 
 }
-#foto1{
-    animation-name: foto1;
-    animation-duration: 3s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
-@keyframes foto1{
-    0%{opacity: 0}
-    100%{opacity: 1}
-}
-#foto2{
-    animation-name: foto2;
-    animation-duration: 3s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
-@keyframes foto2{
-    0%{opacity: 0}
-    100%{opacity: 1}
-}
-#foto3{
-    animation-name: foto3;
-    animation-duration: 3s;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
-@keyframes foto3{
-    0%{opacity: 0}
-    100%{opacity: 1}
-}
 #foto1,#foto2,#foto3{
     display: inline-block;
     margin:0 100px;
     border-radius: 10px 10px;
     text-align: center;
+}
+#f1, #f2, #f3{
+    display: none;
 }
 .info_foto{
     width: 50%;
@@ -293,20 +285,36 @@ h3{
 }
 form{
     width: 100%;
-    display: flex;
 }
 #datos_personales{
-    width: 50%;
+    width: 35%;
 }
 
 #datos_reserva{
-    width: 50%;
+    width: 35%;
 }
-#nombre,#apellido1,#apellido2,#correo,#telefono,#fecha_entrada,#fecha_salida,#num_personas,#enviar{
+
+#seccion_reserva h2{
+    width: 25%;
+}
+
+#seccion_reserva h2, #datos_personales, #datos_reserva{
+    display: inline-block;
+    vertical-align: top;
+}
+.error{
+    background: #ffaaaa;
+    display: block;
+}
+
+#nombre,#apellido1,#apellido2,#correo,#telefono,#fecha_entrada,#fecha_salida,#num_personas,#aceptar{
     margin-bottom: 5px;
     text-align: center;
     color: white;
     font-family:"Mongolian Baiti";
+}
+#enviar{
+    text-align: center;
 }
 label{
     width: 100%;
@@ -317,7 +325,7 @@ label{
     text-shadow: 2px 2px 2px #1b6d85;
     color: white;
 }
-#submit{
+#envi{
     padding: 10px 20px;
     background: #66afe9;
     text-decoration: none;

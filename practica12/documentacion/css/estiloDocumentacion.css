@@ -1,0 +1,78 @@
+#contenedor{
+    width: 95%;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 2px 2px 2px black;
+}
+#flex{
+    display: flex;
+}
+body{
+    background: gray;
+}
+img{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+header{
+    width: 100%;
+    background: #0b3e6f;
+    padding: 10px 0 10px 0;
+}
+header h1{
+    text-align: center;
+    color: white;
+}
+nav{
+    width: 15%;
+    background: #f0f4c3;
+    padding: 0;
+    margin:0;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+nav ul a{
+    text-decoration: none;
+    color: #0b3e6f;
+    text-align: center;
+    font-weight: bold;
+}
+nav ul a li{
+    padding: 10px 6px 10px 6px;
+}
+nav ul a li:hover{
+    background: white;
+}
+main{
+    width: 85%;
+    padding: 20px;
+    text-align: justify;
+}
+#mensaje{
+    text-align: center;
+    color: #0b3e6f;
+    animation: parpadeo 2s infinite;
+}
+@keyframes parpadeo {
+    from{color: white}
+    to{color:orangered}
+}
+article{
+    display: none;
+}
+article h2{
+    text-align: center;
+}
+footer{
+    background: #0b58a2;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+}
+h3{
+    margin: 0;
+}

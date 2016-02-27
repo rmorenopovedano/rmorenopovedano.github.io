@@ -6,8 +6,13 @@
     <title>Raúl Moreno Povedano</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.min.css" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script src="js-cookie-master/src/js.cookie.js"></script>
+    <script type="text/javascript" src="js/page3.js"></script>
 </head>
 <body>
 <header>
@@ -15,8 +20,8 @@
 </header>
 <nav class="transparent">
     <ul class="ul_index">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="page1.html">Galería</a></li>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="principal.html">Galería</a></li>
         <li><a href="reservas.html">Reservas</a></li>
         <li><a href="#">Contacto</a></li>
     </ul>
@@ -24,48 +29,51 @@
 <main>
     <h1 id="h1_index_page1">Tu Casa Rural</h1>
     <section id="seccion_reserva">
-        <form action="#">
+        <form action="#" method="post" id="formulario">
             <h2 id="h2_reserva">Reservations</h2>
             <div id="datos_personales">
                 <div id="nombre">
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
+                    <input type="text" id="name" name="nombre"><span style="display: none" id="errorNombre"></span>
                 </div>
                 <div id="apellido1">
                     <label for="apellido1">Primer apellido</label>
-                    <input type="text" name="apellido1" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
+                    <input type="text" id="ape1" name="apellido1"><span style="display: none" id="errorApellido1"></span>
                 </div>
                 <div id="apellido2">
                     <label for="apellido2">Segundo apellido</label>
-                    <input type="text" name="apellido2" required pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
+                    <input type="text" id="ape2" name="apellido2"><span style="display: none" id="errorApellido2"></span>
                 </div>
                 <div id="correo">
                     <label for="correo">Email</label>
-                    <input type="text" name="correo" placeholder="example@example.com" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+                    <input type="text" id="email" name="correo" placeholder="example@example.com"><span style="display: none" id="errorCorreo"></span>
                 </div>
 
             </div>
             <div id="datos_reserva">
                 <div id="telefono">
                     <label for="telefono">Teléfono</label>
-                    <input type="text" name="telefono" required pattern="^[\d]+">
+                    <input type="text" id="telef" name="telefono"><span style="display: none" id="errorTelefono"></span>
                 </div>
                 <div id="fecha_entrada">
-                    <label for="fecha_entrada">Fecha de entrada</label>
-                    <input type="text" name="fecha_entrada" placeholder="dd/mm/aaaa" required pattern="^(0?[1-9]|[12][0-9]|3[01])[\/-](0?[1-9]|1[012])[/\-\/](19|20)\d{2}$">
+                    <label for="from">Fecha de entrada</label>
+                    <input type="text" id="from" name="from"  readonly><span style="display: none" id="errorFechaEntrada"></span>
                 </div>
                 <div id="fecha_salida">
-                    <label for="fecha_salida">Fecha de salida</label>
-                    <input type="text" name="fecha_salida" placeholder="dd/mm/aaaa" required pattern="^(0?[1-9]|[12][0-9]|3[01])[\/-](0?[1-9]|1[012])[/\-\/](19|20)\d{2}$">
+                    <label for="to">Fecha de salida</label>
+                    <input type="text" id="to" name="to"  readonly><span style="display: none" id="errorFechaSalida"></span>
                 </div>
                 <div id="num_personas">
                     <label for="num_personas">Número de personas</label>
-                    <input type="text" name="num_personas" required pattern="^[1-9]$">
+                    <input type="text" id="personas" name="num_personas"><span style="display: none" id="errorNumPersonas"></span>
                 </div>
-                <div id="enviar">
-                    <label for="enviar"></label>
-                    <input id="submit" type="submit" name="enviar" value="Reserve">
+                <div id="aceptar">
+                    <input type="checkbox" id="acept" >Acepto las condiciones<br><span style="display: none" id="errorAceptar"></span>
                 </div>
+            </div>
+            <div id="enviar">
+                <label for="enviar"></label>
+                <input type="submit" id="envi" name="enviar" value="Reserve">
             </div>
         </form>
     </section>
@@ -84,10 +92,12 @@
         <div id="redes">
             <ul id="lista_footer_redes">
                 <h3>Social</h3>
-                <li><a href="#"><img src="img/32-facebook.png"></a></li>
-                <li><a href="#"><img src="img/32-instagram.png"></a></li>
-                <li><a href="#"><img src="img/32-twitter.png"></a></li>
+                <li><a href="#"><img src="img/facebook.png"></a></li>
+                <li><a href="#"><img src="img/instagram.png"></a></li>
+                <li><a href="#"><img src="img/twitter.png"></a></li>
             </ul>
         </div>
     </div>
     </footer>
+</body>
+</html>
