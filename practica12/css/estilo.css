@@ -325,6 +325,22 @@ label{
     text-shadow: 2px 2px 2px #1b6d85;
     color: white;
 }
+#mensaje{
+    position: fixed;
+    box-shadow: 4px 4px 2px gray;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    padding: 40px;
+    font-size: 2em;
+    border: 2px solid #1b6d85;
+    color: #1b6d85;
+    background-color: white;
+    z-index: 3;
+    text-align: center;
+    display: none;
+    transform: translate(-50%,-50%);
+}
 #envi{
     padding: 10px 20px;
     background: #66afe9;

@@ -12,6 +12,7 @@ $(function(){
     var num_personas=document.getElementById('personas');
     var aceptar=document.getElementById('acept');
     var submit=document.getElementById('envi');
+    var mensaje=$('#mensaje');
     comprobarCookies();
     nombre.addEventListener('blur', function(){
         validarNombre(nombre);
@@ -38,6 +39,7 @@ $(function(){
         evento.preventDefault();
         if(validarFormulario()){
             crearCookies();
+            mensaje.css("display","block");
             $('#formulario').submit();
         }
         else return false;
